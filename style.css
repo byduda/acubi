@@ -1,6 +1,10 @@
+* /*reset de CSS, deixa toda a pré-padronização da página resetada para ser redefinida*/ {
+    margin: 0; /*altera a margem de todos os elementos da página para 0*/
+    padding: 0; /*altera o espaçamento interno de todos os elementos da página  para 0*/
+
+}
 
 /*fontes*/
-
 @font-face {
     font-family: 'Share Tech Mono';
     src: url('./assets/fonts/share-tech-mono-regular.ttf') format('truetype');
