@@ -139,18 +139,21 @@ h2.apresentacao_subtitulo {
 
 /*lateral de dentro do container*/
 .window-body{
-   background: #f0f0f0;
-   border: 1px solid var(--preto);
-   box-shadow: 0 0 0 1px #fffa;
-   margin: 6px;
-   margin-top: 0;
-   overflow:auto;
-   height:570px;
-}
+    background: #f0f0f0;
+    border: 1px solid var(--preto);
+    box-shadow: 0 0 0 1px #fffa;
+    margin: 6px;
+    margin-top: 0;
+    overflow:auto;
+    
+    /* --- LÓGICA DE ALTURA RESPONSIVA --- */
+    height: 80vh; /* Define a altura ideal como 80% da altura da tela (viewport-height) */
+    max-height: 570px; /* Impede que a janela fique maior que 570px em telas muito altas */
+    min-height: 450px; /* Garante que a janela não fique pequena demais em telas baixas */
+ }
 
 /*dentro do container*/
 #posts{
-    width:516px;
     padding:10px;
     margin: 10px;
     background-color:var(--branco);
@@ -158,7 +161,7 @@ h2.apresentacao_subtitulo {
     margin-top: -10px;
     background-image: url('./assets/imgs/divider.png');
     background-repeat: no-repeat;
-    background-size: 536px;
+    background-size: 100%; /* AQUI FOI ALTERADO */
 
 }
 
