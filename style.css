@@ -114,12 +114,11 @@ h2.apresentacao_subtitulo {
 
  /*container da janela*/
  #container{
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%); 
-    position:fixed;
-    width: 90%; /* Ocupa 90% da largura da tela */
-    max-width: 590px; /* Mas não passa de 590px */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    position: fixed;
+    width: 590px; /* Largura fixa de 590px sempre */
     
 }
 
