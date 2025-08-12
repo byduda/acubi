@@ -28,6 +28,11 @@
                        linear-gradient(90deg,hsla(0, 100%, 50%, 0.06),
                                              rgba(0,255,0,0.02),
                                              rgba(0,0,255,0.06));
+    --barrademenu: linear-gradient(hsla(0,0%,100%,.5) 
+                               20%,hsla(0,0%,100%,.5) 
+                               25%,rgba(0,0,0,.0509804) 
+                               43%,rgba(0,0,0,.1) 
+                               48%,rgba(0,0,0,.0509804));
     --preto: #000;
     --branco: #fff;
 }
@@ -59,8 +64,9 @@
      pointer-events:none; /*impede que o efeito interfira na interação do usuário com a página*/
  }
 
+ /*título*/
  h1.apresentacao_titulo {
-    margin:0 0 10px 0;
+    margin:60px 0 10px 0px;
     padding:0;
     letter-spacing:1px;
     font-family: "Share Tech Mono";
@@ -70,6 +76,7 @@
 
 }
 
+/*subtítulo*/
 h2.apresentacao_subtitulo {
     margin:0 0 10px 0;
     padding:0;
@@ -104,22 +111,6 @@ h2.apresentacao_subtitulo {
     color:var(--preto);
 
 }
-
- /*link âncora*/
- a{
-     color:var(--preto);
-     -moz-transition-duration:.4s;
-     -webkit-transition-duration:.4s;
-     -o-transition-duration:.4s;
- }
-
-/*link âncora ao passar o moouse*/
- a:hover{
-     color:#d0d0d0;
-     -moz-transition-duration:.4s;
-     -webkit-transition-duration:.4s;
-     -o-transition-duration:.4s;
- }
 
  /*container da janela*/
  #container{
@@ -156,17 +147,20 @@ h2.apresentacao_subtitulo {
 /*dentro do container*/
 #posts{
     width:516px;
-    margin: 10px;
     padding:10px;
+    margin: 10px;
     background-color:var(--branco);
     border:1px solid #848484;
+    margin-top: -10px;
+    background-image: url('./assets/imgs/divider.png');
+    background-repeat: no-repeat;
+    background-size: 536px;
+
 }
 
 #posts img{
     max-width:100%;
     height:100%;
-    filter:saturate(50%);
-
 }
 
 /*título da página do lado do icon*/
@@ -186,117 +180,104 @@ h2.apresentacao_subtitulo {
      font-size:11px;
      margin-top: 1px;
      margin-bottom: 2px;
- 
  }
 
+/*barra de menu*/
+ul[role=menubar]{
+   background:var(--barrademenu);
+   padding:3px 6px;
+   margin-top: -2px;
+   margin-bottom: -2px;
+}
 
-ul[role=menu]{
+/*menu texto*/
+li[role=menuitem]{
+   display: inline-flex;
+   font-size:12px;
+   font-family:"MS PGothic";
+   text-transform: lowercase; 
+   color:var(--preto);
+   padding:6px 10px;
+   position:relative;
+   
+}
+
+/*menu ao passar o mouse*/
+[role=menuitem]:hover{
+    background:var(--preto);
+    color:var(--branco);
+    outline:none;
+    cursor:pointer;
+    transition: all .2s ease-in-out;
+}
+
+/*submenu*/
+ul[role=submenu]{
     background: var(--branco);
-    border:1px solid var(--preto);
-    box-shadow:4px 4px 3px -2px var(--preto);
-    color:initial;min-width:150px;
-    padding:2px;position:relative;
-
-}
-
-ul[role=menu]:before{
-    box-shadow:inset 1px 0 #00000026,inset -1px 0 var(--branco);
-    content:"";
-    height:calc(100% - 4px);
-    left:var(--w7-mn-left);
-    pointer-events:none;
-    position:absolute;
-    width:2px;
-
-}
-
-[role=menuitem] ul[role=menu]{
+    border: 1px solid var(--preto);
+    box-shadow: 4px 4px 3px -2px var(--preto);
+    min-width: 150px;
+    padding: 2px;
     display:none;
-    left:0;
+    left:0px;
     position:absolute;
     top:100%;
     z-index:99;
-
 }
 
-ul.can-hover [role=menuitem]:hover>[role=menu]{
-    display:block;
-
+/*barrinha lateral do submenu*/
+[role=submenu]:before{
+    box-shadow:inset 1px 0 #f0f0f0, inset -1px 0 var(--branco);
+    content:"";
+    height:calc(100% - 4px);
+    left: 25px;
+    pointer-events:none;
+    position:absolute;
+    width:2px;
 }
 
-ul[role=menu]>[role=menuitem]>a,ul[role=menu]>[role=menuitem][aria-haspopup=true]{
-    all:unset;
-    border:1px solid transparent;
-    border-radius:3px;
-    box-sizing:border-box;
-    display:flex;
-    padding:4px 10px 4px 32px;
-    width:100%;
-    color: var(--preto);
-
-}
-
-:root{
-    --w7-mn-left:28px;
-
-}
-ul[role]{
-    cursor:default;
-    list-style:none;
-    margin:0;
-    padding:0
-}
-
-:focus-visible,ul[role=menu]>[role=menuitem]>a:hover{
-    background:var(--w7-li-bg-hl);
-    border-color:var(--w7-li-bd-hl)
-}
-
- ul[role=menubar]{
-     background:linear-gradient(hsla(0,0%,100%,.5) 
-                            20%,hsla(0,0%,100%,.5) 
-                            25%,rgba(0,0,0,.0509804) 
-                            43%,rgba(0,0,0,.1) 
-                            48%,rgba(0,0,0,.0509804));
-     display:flex
- }
-
- ul[role=menubar]>[role=menuitem]{
-    padding:6px 10px;
-    position:relative;
+/*submenu texto*/
+li[role=submenuitem]{
+    display: inline-flex;
     font-size:12px;
     font-family:"MS PGothic";
-    text-transform: lowercase;
-
+    text-transform: lowercase; 
+    color:var(--preto);
+    padding:7px 10px;
+    position:relative;
+    text-decoration: none;
+    background: var(--branco);
+    left: 29px;
 }
 
-ul[role=menubar]>[role=menuitem]
-:focus,ul[role=menubar]>[role=menuitem]
-:focus-within,ul[role=menubar]>[role=menuitem]:hover{
-background:rgb(41, 41, 41);
-color:var(--branco);
-outline:none;
-transition-duration: .4s;
-
+/*submenu ao passar o mouse*/
+[role=submenuitem]:hover{
+   background: linear-gradient(hsla(0,0%,100%,.5) 20%,
+   hsla(0,0%,100%,.5) 25%,
+   rgba(0,0,0,.0509804) 43%,
+   rgba(0,0,0,.1) 48%,
+   rgba(0,0,0,.0509804));
+   min-width: 99px;
+   border: 1px solid #0006;
+   border-radius: 3px;
+   left: 29px; 
 }
 
-ul[role=menubar]>[role=menuitem]
-:focus-within~[role=menuitem]
-:focus,ul[role=menubar]>[role=menuitem]:focus-within~[role=menuitem]
-:focus-within,ul[role=menubar]>[role=menuitem]:focus~[role=menuitem]
-:focus,ul[role=menubar]>[role=menuitem]:focus~[role=menuitem]
-:focus-within,ul[role=menubar]>[role=menuitem]:hover~[role=menuitem]
-:focus,ul[role=menubar]>[role=menuitem]:hover~[role=menuitem]
-:focus-within{
-background:transparent;
-color:inherit
-
+:hover>[role=submenu]{
+   display:block;
 }
 
+/*link âncora*/
+a{
+   color:var(--preto);
+   transition-duration:.4s;
+   text-decoration: none;
+}
+
+/*barra de rolagem*/
  ::-webkit-scrollbar{
      width:15px;
  }
-
  ::-webkit-scrollbar-track:vertical{
      background:linear-gradient(90deg,#e5e5e5,#f0f0f0 20%);
      border-radius:3px;
@@ -309,7 +290,6 @@ color:inherit
  ::-webkit-scrollbar-thumb:vertical{
      background:linear-gradient(90deg,#eee 45%,#ddd 0,#bbb);
  }
- 
  ::-webkit-scrollbar-button:vertical{
      height:10px;
  }
