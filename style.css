@@ -70,7 +70,7 @@
     padding:0;
     letter-spacing:1px;
     font-family: "Share Tech Mono";
-    font-size:14px;
+    font-size: 0.875rem;
     text-align: justify;
     color:var(--preto);
 
@@ -82,7 +82,7 @@ h2.apresentacao_subtitulo {
     padding:0;
     letter-spacing:1px;
     font-family: "Share Tech Mono";
-    font-size:14px;
+    font-size: 0.875rem;
     text-align: justify;
     color:var(--preto);
 
@@ -94,7 +94,7 @@ h2.apresentacao_subtitulo {
      padding:0;
      letter-spacing:1px;
      font-family: "Share Tech Mono";
-     font-size:14px;
+     font-size: 0.875rem;
      text-align: justify;
      color:var(--preto);
 
@@ -106,7 +106,7 @@ h2.apresentacao_subtitulo {
     padding:0;
     letter-spacing:1px;
     font-family: "Share Tech Mono";
-    font-size:14px;
+    font-size: 0.875rem;
     text-align: justify;
     color:var(--preto);
 
@@ -118,7 +118,8 @@ h2.apresentacao_subtitulo {
     left:50%;
     transform:translate(-50%,-50%); 
     position:fixed;
-    width:590px;
+    width: 90%; /* Ocupa 90% da largura da tela */
+    max-width: 590px; /* Mas não passa de 590px */
     
 }
 
