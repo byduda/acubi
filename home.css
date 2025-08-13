@@ -1,6 +1,6 @@
  /*home*/
 
- .apresentacao{
+main.apresentacao{
     display: inline-flex;
     justify-content: space-between;
     margin: 0px 0px 0px 0px;
@@ -10,7 +10,7 @@
 }
 
 /*imagem perfil preto e branco*/
-.imgduda{
+main.imgduda{
     background-image: url(./assets/imgs/imgduda.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,12 +27,12 @@
 }
 
 /*imagem perfil colorida ao passar o mouse*/
-.imgduda:hover{
+main.imgduda:hover{
     filter: none;
 }
 
  /*título (Hello World)*/
- h1.apresentacao_titulo {
+h1.apresentacao_titulo {
     margin:0px 0px 0px 0px;
     padding:0;
     font-family: 'MS PGothic';
@@ -41,7 +41,7 @@
     font-size: 22px;
     font-weight: 400;
     letter-spacing:-1px;
-    color:var(--preto);
+    color:#000;
     text-align: center;
     text-transform: uppercase;
 
@@ -63,7 +63,7 @@ h2.apresentacao_subtitulo {
 }
 
 /*frase (Coraline)*/
-  p.frase{
+p.frase{
     margin:10px 0 15px 0;
     padding: 0px;
     font-family: 'MS PGothic';
@@ -71,11 +71,11 @@ h2.apresentacao_subtitulo {
     font-weight: 300;
     font-size: 12px;
     text-align: center;
-    color:var(--preto);
+    color:#000;
 }
  
  /*parágrafo (Sou uma profissional...)*/
- p.apresentacao_texto{
+p.apresentacao_texto{
      margin:0 0 10px 0;
      padding:0;
      font-family: 'MS PGothic';
@@ -84,10 +84,10 @@ h2.apresentacao_subtitulo {
      font-size: 14px;
      letter-spacing:1.5px;
      text-align: justify;
-     color:var(--preto);
+     color:#000;
  }
 
- .icons{
+div.icons{
     margin: 45px 0;
     display: flex;
     justify-content: center;
@@ -95,38 +95,62 @@ h2.apresentacao_subtitulo {
 }
 
 a.email {
-    width: 32px;
-    height: 32px;
-    background-image: url(./assets/icons/email.png);
-    background-size: cover;
-    image-rendering: pixelated;
+    width: 25px;
+    height: 25px;
+    background-image: url(./assets/icons/email.svg);
+    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+}
+
+a.email:hover{
+    filter: invert(70%);
+    transform: scale(1.05); /*altera o tamanho da imagem quando o mouse passa por cima*/
 }
 
 a.figma {
-    width: 32px;
-    height: 32px;
-    background-image: url(./assets/icons/figma.png);
-    background-size: cover;
+    width: 25px;
+    height: 25px;
+    background-image: url(./assets/icons/figma.svg);
+    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+
+}
+
+a.figma:hover{
+    filter: invert(70%);
+    transform: scale(1.05); /*altera o tamanho da imagem quando o mouse passa por cima*/
 }
 
 a.github {
-    width: 32px;
-    height: 32px;
-    background-image: url(./assets/icons/github.png);
-    background-size: cover;
+    width: 25px;
+    height: 25px;
+    background-image: url(./assets/icons/github.svg);
+    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+}
+
+a.github:hover{
+    filter: invert(70%);
+    transform: scale(1.05); /*altera o tamanho da imagem quando o mouse passa por cima*/
 }
 
 a.linkedin {
-    width: 32px;
-    height: 32px;
-    background-image: url(./assets/icons/linkedin.png);
-    background-size: cover;
+    width: 25px;
+    height: 25px;
+    background-image: url(./assets/icons/linkedin.svg);
+    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+}
+
+a.linkedin:hover{
+    filter: invert(70%);
+    transform: scale(1.05); /*altera o tamanho da imagem quando o mouse passa por cima*/
 }
 
 a.whatsapp {
-    width: 32px;
-    height: 32px;
-    background-image: url(./assets/icons/whatsapp.png);
-    background-size: cover;
-    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(./assets/icons/whatsapp.svg);
+    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+}
+
+a.whatsapp:hover{
+    filter: invert(70%);
+    transform: scale(1.05); /*altera o tamanho da imagem quando o mouse passa por cima*/
 }
