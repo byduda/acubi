@@ -6,18 +6,9 @@
     padding: 0; /*altera o espaçamento interno de todos os elementos da página  para 0*/
 }
 
-/*fontes*/
-@font-face {
-    font-family: 'Share Tech Mono';
-    src: url('./assets/fonts/share-tech-mono-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    
-}
-
 @font-face {
     font-family: 'MSP Gothic';
-    src: url('./assets/fonts/ms-pgothic-regular.ttf') format('truetype');
+    src: url('../assets/fonts/ms-pgothic-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -69,7 +60,7 @@
  /*imagem de fundo*/
  body{
      margin:0;
-     background-image: url('./assets/imgs/background.jpg');
+     background-image: url('../assets/imgs/background.jpg');
      background-size:cover;
      background-attachment:fixed;
      overflow: hidden;
@@ -124,12 +115,12 @@
 /*dentro do container com divisória*/
 #postsdivider{
     padding:10px;
-    padding-top: 60px ;
+    padding-top: 67px ;
     margin: 10px;
     background-color:var(--branco);
     border:1px solid #848484;
     margin-top: -10px;
-    background-image: url('./assets/imgs/divider.png');
+    background-image: url('../assets/imgs/divider.png');
     background-repeat: no-repeat;
     background-size: 100%;
     display: block;
@@ -286,7 +277,7 @@ a{
  }
  ::-webkit-scrollbar-button:vertical:start{
      background:var(--branco);
-     background: url('./assets/imgs/scrollstart.png');
+     background: url('../assets/imgs/scrollstart.png');
      background-repeat:no-repeat;
      background-position:center;
      -moz-background-size:100% auto,cover;
@@ -299,7 +290,7 @@ a{
 
  ::-webkit-scrollbar-button:vertical:end{
      background:var(--branco);
-     background:url('./assets/imgs/scrollend.png');
+     background:url('../assets/imgs/scrollend.png');
      background-repeat:no-repeat;
      background-position:center;
      -moz-background-size:100% auto,cover;
