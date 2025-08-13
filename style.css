@@ -1,15 +1,23 @@
-* /*reset de CSS, deixa toda a pré-padronização da página resetada para ser redefinida*/ {
+/*estilização da página*/
+
+/*reset de CSS, deixa toda a pré-padronização da página resetada para ser redefinida*/
+*{
     margin: 0; /*altera a margem de todos os elementos da página para 0*/
     padding: 0; /*altera o espaçamento interno de todos os elementos da página  para 0*/
-
 }
-
-
 
 /*fontes*/
 @font-face {
     font-family: 'Share Tech Mono';
     src: url('./assets/fonts/share-tech-mono-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face {
+    font-family: 'MSP Gothic';
+    src: url('./assets/fonts/ms-pgothic-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,39 +26,50 @@
 :root{
     --efeitovidro: linear-gradient(135deg,#fff5 70px,transparent 100px),
                    linear-gradient(225deg,#fff5 70px,transparent 100px),
-                   linear-gradient(54deg,#0002 0 4%,
-                    #0002 15% 16%,
-                    #0002 23% 24%,
-                    #bbb2 25% 26%,#0002 31% 33%,
-                    #0002 34% 34.5%,
-                    #bbb2 36% 40%,
-                    #0002 41% 41.5%,
-                    #bbb2 44% 45%,#bbb2 46% 47%,
-                    #0002 48% 49%,#0002 50% 50.5%,
-                    #0002 56% 56.5%,#bbb2 57% 63%,#0002 67% 69%,
-                    #aaa2 85% 86%,#0002 87%) left center/100vw 100vh no-repeat fixed;
-    --efeitoanalogico: linear-gradient(90deg, hsla(0, 100%, 50%, 0.06),
-                                              rgba(0, 255, 0, 0.02),
-                                              rgba(0, 0, 255, 0.06));
-    --barrademenu: linear-gradient(hsla(0,0%,100%,.5) 
-                               20%,hsla(0,0%,100%,.5) 
-                               25%,rgba(0,0,0,.0509804) 
-                               43%,rgba(0,0,0,.1) 
-                               48%,rgba(0,0,0,.0509804));
+                   linear-gradient(54deg, #0002 0 4%,
+                                          #0002 15% 16%,
+                                          #0002 23% 24%,
+                                          #bbb2 25% 26%,
+                                          #0002 31% 33%,
+                                          #0002 34% 34.5%,
+                                          #bbb2 36% 40%,
+                                          #0002 41% 41.5%,
+                                          #bbb2 44% 45%,
+                                          #bbb2 46% 47%,
+                                          #0002 48% 49%,
+                                          #0002 50% 50.5%,
+                                          #0002 56% 56.5%,
+                                          #bbb2 57% 63%,
+                                          #0002 67% 69%,
+                                          #aaa2 85% 86%,
+                                          #0002 87%) left center/100vw 100vh no-repeat fixed;
+    --efeitoanalogico: linear-gradient(90deg, #ff00000f,
+                                              #00ff0005,
+                                              #0000ff0f);
+    --barrademenu: linear-gradient(#ffffff80 
+                               20%,#ffffff80 
+                               25%,#0000000d 
+                               43%,#0000001a 
+                               48%,#0000000d);
+    --submenu: linear-gradient(hsla(0,0%,100%,.5) 20%,
+                               hsla(0,0%,100%,.5) 25%,
+                               rgba(0,0,0,.0509804) 43%,
+                               rgba(0,0,0,.1) 48%,
+                               rgba(0,0,0,.0509804));
     --preto: #000;
     --branco: #fff;
 }
 
 /*seleção de texto*/ 
  ::selection{
-     background: var(--branco);
-     color: var(--preto);
+     background: var(--preto);
+     color: var(--branco);
  }
 
  /*imagem de fundo*/
  body{
      margin:0;
-     background-image:url('https://64.media.tumblr.com/41ef3a38c2d28f541c1d9730563fe912/abd198e755c19739-1e/s2048x3072/814fb13aceb94cac61edff3814581bd32e8632ff.jpg');
+     background-image: url('./assets/imgs/background.jpg');
      background-size:cover;
      background-attachment:fixed;
      overflow: hidden;
@@ -65,55 +84,7 @@
     background: var(--efeitoanalogico);
     z-index: 2; /*coloca o efeito acima de tudo*/
     background-size: 3px 100%;
-    pointer-events: none; /*impede que o efeito interfira na interação do usuário com a página*/
-}
-
- /*título*/
- h1.apresentacao_titulo {
-    margin:60px 0 10px 0px;
-    padding:0;
-    letter-spacing:1px;
-    font-family: "Share Tech Mono";
-    font-size: 0.875rem;
-    text-align: justify;
-    color:var(--preto);
-
-}
-
-/*subtítulo*/
-h2.apresentacao_subtitulo {
-    margin:0 0 10px 0;
-    padding:0;
-    letter-spacing:1px;
-    font-family: "Share Tech Mono";
-    font-size: 0.875rem;
-    text-align: justify;
-    color:var(--preto);
-
-}
- 
- /*parágrafo*/
- p.apresentacao_texto{
-     margin:0 0 10px 0;
-     padding:0;
-     letter-spacing:1px;
-     font-family: "Share Tech Mono";
-     font-size: 0.875rem;
-     text-align: justify;
-     color:var(--preto);
-
- }
-
-  /*parágrafo*/
-  p.frase{
-    margin:0 0 10px 0;
-    padding:0;
-    letter-spacing:1px;
-    font-family: "Share Tech Mono";
-    font-size: 0.875rem;
-    text-align: justify;
-    color:var(--preto);
-
+    pointer-events: none; /*impede que o efeito interfira na interação do usuário com a página*/   
 }
 
  /*container da janela*/
@@ -145,29 +116,35 @@ h2.apresentacao_subtitulo {
     margin: 6px;
     margin-top: 0;
     overflow:auto;
-    
-    /* --- LÓGICA DE ALTURA RESPONSIVA --- */
     height: 80vh; /* Define a altura ideal como 80% da altura da tela (viewport-height) */
     max-height: 570px; /* Impede que a janela fique maior que 570px em telas muito altas */
     min-height: 450px; /* Garante que a janela não fique pequena demais em telas baixas */
  }
 
-/*dentro do container*/
-#posts{
+/*dentro do container com divisória*/
+#postsdivider{
     padding:10px;
+    padding-top: 60px ;
     margin: 10px;
     background-color:var(--branco);
     border:1px solid #848484;
     margin-top: -10px;
     background-image: url('./assets/imgs/divider.png');
     background-repeat: no-repeat;
-    background-size: 100%; /* AQUI FOI ALTERADO */
+    background-size: 100%;
+    display: block;
 
 }
 
-#posts img{
-    max-width:100%;
-    height:100%;
+/*dentro do container sem divisória*/
+#posts{
+    padding:10px;
+    margin: 10px;
+    background-color:var(--branco);
+    border:1px solid #848484;
+    margin-top: -10px;
+    display: block;
+
 }
 
 /*título da página do lado do icon*/
@@ -181,41 +158,45 @@ h2.apresentacao_subtitulo {
 
 /*texto do título da página do lado do icon*/
  .title-bar-text{
-     font-family: "MS PGothic",sans-serif;
-     color:#4f4f4f;
-     letter-spacing:3px;
-     font-size:11px;
-     margin-top: 1px;
-     margin-bottom: 2px;
+    font-family: 'MS PGothic';
+    font-style: normal;
+    font-weight: 300;
+    color:#4f4f4f;
+    letter-spacing:3px;
+    font-size:11px;
+    margin-top: 1px;
+    margin-bottom: 2px;
  }
 
 /*barra de menu*/
 ul[role=menubar]{
-   background:var(--barrademenu);
-   padding:3px 6px;
-   margin-top: -2px;
-   margin-bottom: -2px;
+    background:var(--barrademenu);
+    padding:3px 6px;
+    margin-top: -2px;
+    margin-bottom: -2px;
 }
 
 /*menu texto*/
 li[role=menuitem]{
-   display: inline-flex;
-   font-size:12px;
-   font-family:"MS PGothic";
-   text-transform: lowercase; 
-   color:var(--preto);
-   padding:6px 10px;
-   position:relative;
-   
+    display: inline-flex;
+    font-size:12px;
+    font-family: 'MS PGothic';
+    font-style: normal;
+    font-weight: 300;
+    text-transform: lowercase; 
+    color:var(--preto);
+    padding:6px 10px;
+    position:relative;
 }
 
-/*menu ao passar o mouse*/
-[role=menuitem]:hover{
+/*menu texto ao passar o mouse*/
+li[role=menuitem]:hover{
     background:var(--preto);
     color:var(--branco);
     outline:none;
     cursor:pointer;
     transition: all .2s ease-in-out;
+    display: inline-flex;
 }
 
 /*submenu*/
@@ -230,10 +211,11 @@ ul[role=submenu]{
     position:absolute;
     top:100%;
     z-index:99;
+    
 }
 
 /*barrinha lateral do submenu*/
-[role=submenu]:before{
+ul[role=submenu]:before{
     box-shadow:inset 1px 0 #f0f0f0, inset -1px 0 var(--branco);
     content:"";
     height:calc(100% - 4px);
@@ -243,34 +225,34 @@ ul[role=submenu]{
     width:2px;
 }
 
+/*abrir submenu*/
+:hover>[role=submenu]{
+    display:block;
+ }
+
 /*submenu texto*/
 li[role=submenuitem]{
-    display: inline-flex;
+    display: flex;
     font-size:12px;
-    font-family:"MS PGothic";
+    font-family: 'MS PGothic';
+    font-style: normal;
+    font-weight: 300;
     text-transform: lowercase; 
     color:var(--preto);
     padding:7px 10px;
-    position:relative;
+    position: relative;
     text-decoration: none;
     background: var(--branco);
     left: 29px;
+    width: 99px;
 }
 
-/*submenu ao passar o mouse*/
-[role=submenuitem]:hover{
-   background: linear-gradient(hsla(0,0%,100%,.5) 20%,
-   hsla(0,0%,100%,.5) 25%,
-   rgba(0,0,0,.0509804) 43%,
-   rgba(0,0,0,.1) 48%,
-   rgba(0,0,0,.0509804));
-   min-width: 99px;
-   border: 1px solid #0006;
+/*submenu texto ao passar o mouse*/
+li[role=submenuitem]:hover{
+   background: var(--submenu);
+   width: 99px;
+   border: 1px solid var(--preto);
    border-radius: 3px;
-   left: 29px; 
-}
-
-:hover>[role=submenu]{
    display:block;
 }
 
@@ -283,7 +265,7 @@ a{
 
 /*barra de rolagem*/
  ::-webkit-scrollbar{
-     width:15px;
+     width:13px;
  }
  ::-webkit-scrollbar-track:vertical{
      background:linear-gradient(90deg,#e5e5e5,#f0f0f0 20%);
@@ -292,17 +274,19 @@ a{
  ::-webkit-scrollbar-thumb{
      border:1.5px solid #888;
      border-radius:3px;
-     box-shadow:inset 0 -1px 1px #fff,inset 0 1px 1px #fff;
+     box-shadow:inset 0 -1px 1px var(--branco),inset 0 1px 1px var(--branco);
  }
  ::-webkit-scrollbar-thumb:vertical{
      background:linear-gradient(90deg,#eee 45%,#ddd 0,#bbb);
  }
+
  ::-webkit-scrollbar-button:vertical{
      height:10px;
+
  }
- ::-webkit-scrollbar-button:vertical:start:decrement{
-     background:white;
-     background:url("https://dl.dropbox.com/s/n9ji42h9hdgdtpc/scroll3.png"),#eee;
+ ::-webkit-scrollbar-button:vertical:start{
+     background:var(--branco);
+     background: url('./assets/imgs/scrollstart.png');
      background-repeat:no-repeat;
      background-position:center;
      -moz-background-size:100% auto,cover;
@@ -312,9 +296,10 @@ a{
      border:1.5px solid #888;
      border-radius:3px;
  }
- ::-webkit-scrollbar-button:vertical:end:increment{
-     background:white;
-     background:url("https://dl.dropbox.com/s/cdcco6pih7n1lae/scroll4.png"),#eee;
+
+ ::-webkit-scrollbar-button:vertical:end{
+     background:var(--branco);
+     background:url('./assets/imgs/scrollend.png');
      background-repeat:no-repeat;
      background-position:center;
      -moz-background-size:100% auto,cover;

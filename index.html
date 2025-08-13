@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="=IE-Edge"> <!-- utilize a versão mais recente do Edge -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- exibe a página nas escalas dos dispositivos abertos (desktop ou mobile) -->    
         <link href="style.css" rel="stylesheet"/> <!-- utiliza a linguagem de estilização CSS para a página -->
+        <link href="home.css" rel="stylesheet"/> <!-- utiliza a linguagem de estilização CSS para a página -->
         <link href="https://64.media.tumblr.com/a7a9ea748643a9af806adbfd6ddc20de/abd198e755c19739-45/s2048x3072/e3317de764163e4f9f041c0c4bf48ebe78137f5b.gif" rel="shortcut icon"/>
         <title>Home</title><!-- título da página -->
     </head>
@@ -35,32 +36,47 @@
     
 </div></div> 
 
-<ul class="can-hover" 
-role="menubar"> 
+<ul role="menubar"> 
+    <li role="menuitem" tabindex="0">
+        Home
 
-<li role="menuitem" tabindex="0">
-Home
-
-<li role="menuitem" tabindex="0">       
-Curriculum <ul role="submenu">
-    <li role="submenuitem"><a href="link pag trabalhos"target="”_blank”">Work Experience</a></li> 
-    <li role="submenuitem"><a href="link pag cursos"target="”_blank”">Education</a></li>
-    <li role="submenuitem"><a href="link pag certificados"target="”_blank”">Certifications</a></li></ul>
+    <li role="menuitem" tabindex="0">       
+        Curriculum <ul role="submenu">
+            <li role="submenuitem"><a href="link pag trabalhos"target="”_blank”">Work Experience</a></li> 
+            <li role="submenuitem"><a href="link pag cursos"target="”_blank”">Education</a></li>
+            <li role="submenuitem"><a href="link pag certificados"target="”_blank”">Certifications</a></li></ul>
     
-<li role="menuitem" tabindex="0">
-Portfolio <ul role="submenu">
-        <li role="submenuitem"><a href="link pag templates"target="”_blank”">Work Experience</a></li> 
-        <li role="submenuitem"><a href="link pag pixel art"target="”_blank”">Education</a></li></ul>
+        <li role="menuitem" tabindex="0">       
+            Portfolio <ul role="submenu">
+                <li role="submenuitem"><a href="link pag templates"target="”_blank”">Templates</a></li> 
+                <li role="submenuitem"><a href="link pag certificados"target="”_blank”">Pixel Art</a></li></ul>
 </ul>
+
     <div class="window-body">
-    <div id="posts">
-    <h1 class="apresentacao_titulo">Hello World,</h1>
-    <h2 class="apresentacao_subtitulo">{ I'm Duda }</h2>
-    <p class="frase">"Quando você tem medo e faz mesmo assim, isso é coragem. — Coraline."</p>
-    <p class="apresentacao_texto">Sou uma profissional de 26 anos, apaixonada por tecnologia, design, gatinhos e Harry Potter.</p>                                                                           
-    <p class="apresentacao_texto">Com uma sólida bagagem em Suporte e gerenciamento de Banco de Dados, aprendi a importância da estrutura, da lógica e de resolver problemas de forma eficiente. Agora, estou canalizando todo esse conhecimento para a área de desenvolvimento.</p> 
-    <p class="apresentacao_texto">Atualmente, na dupla graduação em Tecnologia da Informação e Engenharia de Software pela UNIVESP, meu grande objetivo é construir pontes entre as pessoas e a tecnologia. Por isso, estou me especializando em desenvolvimento Front-End, com um carinho especial por UI/UX, buscando criar interfaces que não sejam apenas funcionais, mas também intuitivas e agradáveis.</p> 
-    <img src="https://64.media.tumblr.com/4b56baa66dbdae9ac4a1dce8313950c8/8c3431e712977e90-93/s1280x1920/4e0db763b87ce21c88edc45a98d7ad56bd2579de.jpg" alt="Descrição da imagem">
-</div>    
+        <div id="postsdivider">
+            <h1 class="apresentacao_titulo">Hello World,</h1>
+            <h2 class="apresentacao_subtitulo">{ I'm Duda }</h2>
+                <main class = apresentacao>
+                    <section>
+                        <p class="frase">"Quando você tem medo e faz mesmo assim, isso é coragem. — Coraline."</p>
+                        <p class="apresentacao_texto">Sou uma profissional de 26 anos, apaixonada por tecnologia, design, gatinhos e Harry Potter.</p>                                                                           
+                        <p class="apresentacao_texto">Com uma sólida bagagem em Suporte e gerenciamento de Banco de Dados, aprendi a importância da estrutura, da lógica e de resolver problemas de forma eficiente. Agora, estou canalizando todo esse conhecimento para a área de desenvolvimento.</p> 
+                    </section>
+                    <section>
+            <main class="imgduda"></section></main>
+            <p class="apresentacao_texto">Atualmente, na dupla graduação em Tecnologia da Informação e Engenharia de Software pela UNIVESP, meu grande objetivo é construir pontes entre as pessoas e a tecnologia. Por isso, estou me especializando em desenvolvimento Front-End, com um carinho especial por UI/UX, buscando criar interfaces que não sejam apenas funcionais, mas também intuitivas e agradáveis.</p> 
+            </main>
+        </div>
+        
+        <div id="posts">
+            <div class="icons">
+                <a class="github" href="https://github.com/seuusuario" target="_blank"></a>
+                <a class="linkedin" href="https://linkedin.com/in/seuusuario" target="_blank"></a>
+                <a class="figma" href="https://figma.com/@seuusuario" target="_blank"></a>
+                <a class="whatsapp" href="https://figma.com/@seuusuario" target="_blank"></a>
+                <a class="email" href="https://figma.com/@seuusuario" target="_blank"></a>
+            </div>
+        </div>
+    </div> 
     
 <div class="footer">

@@ -1,0 +1,132 @@
+ /*home*/
+
+ .apresentacao{
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0px 0px 0px 0px;
+    align-items: center;
+    gap: 25px;
+    width: 530px;
+}
+
+/*imagem perfil preto e branco*/
+.imgduda{
+    background-image: url(./assets/imgs/imgduda.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 183px;
+    height: 183px;
+    border:1px solid #848484;
+    border-radius: 1%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0px 10px 0px 0px;
+    align-items: center;
+    filter: grayscale(100%) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition-duration: 0.30s; /*altera a duração da transição*/
+}
+
+/*imagem perfil colorida ao passar o mouse*/
+.imgduda:hover{
+    filter: none;
+}
+
+ /*título (Hello World)*/
+ h1.apresentacao_titulo {
+    margin:0px 0px 0px 0px;
+    padding:0;
+    font-family: 'MS PGothic';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing:-1px;
+    color:var(--preto);
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+ /*subtítulo (I'm Duda)*/
+h2.apresentacao_subtitulo {
+    margin:0 0 0px 0;
+    padding:0;
+    font-family: 'MS PGothic';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing:2.3px;
+    color:var(--preto);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*frase (Coraline)*/
+  p.frase{
+    margin:10px 0 15px 0;
+    padding: 0px;
+    font-family: 'MS PGothic';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: center;
+    color:var(--preto);
+}
+ 
+ /*parágrafo (Sou uma profissional...)*/
+ p.apresentacao_texto{
+     margin:0 0 10px 0;
+     padding:0;
+     font-family: 'MS PGothic';
+     font-style: normal;
+     font-weight: 300;
+     font-size: 14px;
+     letter-spacing:1.5px;
+     text-align: justify;
+     color:var(--preto);
+ }
+
+ .icons{
+    margin: 48px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+a.email {
+    width: 32px;
+    height: 32px;
+    background-image: url(./assets/icons/email.png);
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+a.figma {
+    width: 32px;
+    height: 32px;
+    background-image: url(./assets/icons/figma.png);
+    background-size: cover;
+}
+
+a.github {
+    width: 32px;
+    height: 32px;
+    background-image: url(./assets/icons/github.png);
+    background-size: cover;
+}
+
+a.linkedin {
+    width: 32px;
+    height: 32px;
+    background-image: url(./assets/icons/linkedin.png);
+    background-size: cover;
+}
+
+a.whatsapp {
+    width: 32px;
+    height: 32px;
+    background-image: url(./assets/icons/whatsapp.png);
+    background-size: cover;
+    display: inline-block;
+}
