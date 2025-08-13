@@ -29,11 +29,9 @@
                     #0002 48% 49%,#0002 50% 50.5%,
                     #0002 56% 56.5%,#bbb2 57% 63%,#0002 67% 69%,
                     #aaa2 85% 86%,#0002 87%) left center/100vw 100vh no-repeat fixed;
-    --efeitoanalogico: linear-gradient(#12101000 80%,
-                                       #00000040 50%),
-                       linear-gradient(90deg,hsla(0, 100%, 50%, 0.06),
-                                             rgba(0,255,0,0.02),
-                                             rgba(0,0,255,0.06));
+    --efeitoanalogico: linear-gradient(90deg, hsla(0, 100%, 50%, 0.06),
+                                              rgba(0, 255, 0, 0.02),
+                                              rgba(0, 0, 255, 0.06));
     --barrademenu: linear-gradient(hsla(0,0%,100%,.5) 
                                20%,hsla(0,0%,100%,.5) 
                                25%,rgba(0,0,0,.0509804) 
@@ -59,16 +57,16 @@
  }
 
 /*efeito pixel tv analógica*/
- body:after{
-     content:" ";
-     display:block;
-     position:fixed;
-     inset: 0; /*equivale a top, left, bottom, right*/
-     background:var(--efeitoanalogico);
-     z-index:2; /*coloca o efeito acima de tudo*/
-     background-size:100% 2px,3px 100%;
-     pointer-events:none; /*impede que o efeito interfira na interação do usuário com a página*/
- }
+ body:after {
+    content: " ";
+    display: block;
+    position: fixed;
+    inset: 0; /*equivale a top, left, bottom, right*/
+    background: var(--efeitoanalogico);
+    z-index: 2; /*coloca o efeito acima de tudo*/
+    background-size: 3px 100%;
+    pointer-events: none; /*impede que o efeito interfira na interação do usuário com a página*/
+}
 
  /*título*/
  h1.apresentacao_titulo {
