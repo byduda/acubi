@@ -11,7 +11,7 @@ main.apresentacao{
 
 /*imagem perfil preto e branco*/
 main.imgduda{
-    background-image: url(./assets/imgs/imgduda.png);
+    background-image: url(../assets/imgs/imgduda.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 183px;
