@@ -8,28 +8,11 @@
         <link href="styles/style.css" rel="stylesheet"/> <!-- utiliza a linguagem de estilização CSS para a página -->
         <link href="index.css" rel="stylesheet"/> <!-- utiliza a linguagem de estilização CSS para a página -->
         <link href="./assets/icons/shortcut2.png" rel="shortcut icon"/>
-
-        <title>Home</title><!-- título da página -->
+        <!-- título da página -->
+        <title>Home</title>
     </head>
 
 <body>
-    <!-- estrelas no cursor -->
-    <script src="./styles/stars-cursor.js"></script>
-
-    <!-- clicksound -->
-    <script>
-        const clicksound = new Audio('./assets/sounds/clicksound.wav');
-        function tocarSom() {
-          clicksound.currentTime = 0;
-          clicksound.play();
-        }
-        document.addEventListener('click', tocarSom);
-      </script>
-
-    <div>
-        <!-- gatinho do rodapé -->
-        <main class="cat"></main>
-    </div>
 
     <div>
         <!-- barra acima do menu -->
@@ -79,31 +62,50 @@
                 <div class="imgalert"></div>
                 <p class="alert_titulo">Coming soon...</p>
                 <div class ="dotteddivider"></div>
-
                 <h1 class="apresentacao_titulo">Hello World,</h1>
                 <h2 class="apresentacao_subtitulo">{ I'm Duda }</h2>
-                    <main class = apresentacao>
-                        <section>
-                            <p class="frase">"Quando você tem medo e faz mesmo assim, isso é coragem. — Coraline."</p>
+                <main class="apresentacao">
+                  <section class="apresentacao__conteudo">
+                    <p class="frase">"Quando você tem medo e faz mesmo assim, isso é coragem. — Coraline."</p>
                             <p class="apresentacao_texto">Sou uma profissional de 26 anos, apaixonada por tecnologia, design, gatinhos e Harry Potter.</p>                                                                           
                             <p class="apresentacao_texto">Com uma sólida bagagem em Suporte e gerenciamento de Banco de Dados, aprendi a importância da estrutura, da lógica e de resolver problemas de forma eficiente. Agora, estou canalizando todo esse conhecimento para a área de desenvolvimento.</p> 
-                        </section>
-                        <section>
-                <main class="imgduda"></section></main>
-                <p class="apresentacao_texto">Atualmente, na dupla graduação em Tecnologia da Informação e Engenharia de Software pela UNIVESP, meu grande objetivo é construir pontes entre as pessoas e a tecnologia. Por isso, estou me especializando em desenvolvimento Front-End, com um carinho especial por UI/UX, buscando criar interfaces que não sejam apenas funcionais, mas também intuitivas e agradáveis.</p> 
+                          </section>
+                          <figure class="apresentacao__imagem">
+                              <div class="imgduda"></div>
+                              </figure>     
                 </main>
-            </div>
+                <p class="apresentacao_texto texto-largura-total">Atualmente, na dupla graduação em Tecnologia da Informação e Engenharia de Software pela UNIVESP, meu grande objetivo é construir pontes entre as pessoas e a tecnologia. Por isso, estou me especializando em desenvolvimento Front-End, com um carinho especial por UI/UX, buscando criar interfaces que não sejam apenas funcionais, mas também intuitivas e agradáveis.</p> 
             
+              </div>
             <!-- post sem a divisória -->
             <div id="posts">
-                <div class="icons">
-                    <a class="email" href="https://github.com/seuusuario" target="_blank"></a>
-                    <a class="figma" href="https://linkedin.com/in/seuusuario" target="_blank"></a>
-                    <a class="github" href="https://figma.com/@seuusuario" target="_blank"></a>
-                    <a class="linkedin" href="https://figma.com/@seuusuario" target="_blank"></a>
-                    <a class="whatsapp" href="https://figma.com/@seuusuario" target="_blank"></a>
-                </div>
-            </div>
-        </div> 
+            <div class="redes_sociais">
+              <a class="social-icon email" href="mailto:seu-email@exemplo.com" target="_blank">
+                  <span class="sr-only">E-mail</span>
+              </a>
+              <a class="social-icon figma" href="linkfigma" target="_blank">
+                <span class="sr-only">Figma</span>
+            </a>
+              <a class="social-icon github" href="https://github.com/seuusuario" target="_blank">
+                  <span class="sr-only">GitHub</span>
+              </a>
+              <a class="social-icon linkedin" href="link linkedin" target="_blank">
+                <span class="sr-only">Linkedin</span>
+            </a>
+            <a class="social-icon whatsapp" href="linkwhatsapp" target="_blank">
+              <span class="sr-only">WhatsApp</span>
+          </a>
+              </div>
+            </div> 
         
-    <div class="footer"></div> 
+          </div> </div> </div> 
+            
+          <footer>
+          <div class="cat"></div>
+        </footer>
+
+                    <!-- barulho ao clicar -->
+        <script src="./styles/clicksound.js" defer></script>
+        <!-- estrelas no cursor -->
+        <script src="./styles/stars-cursor.js" defer></script>
+        </body>

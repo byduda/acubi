@@ -85,7 +85,6 @@
      background-image: url('../assets/imgs/background.jpg');
      background-size:cover;
      background-attachment:fixed;
-     overflow: hidden;
  }
 
 /*efeito pixel tv analógica*/
@@ -357,19 +356,47 @@ div.dotteddivider {
      border-radius:3px;
  }
 
- main.cat{
-    background-image: url(../assets/icons/cat.png);
-    background-size: cover;
-    width: 80px;
-    height: 80px;
-    position: fixed;
-    bottom: 0; 
-    left: 50%;
-    transform: translateX(-50%);
-    transition: bottom 0.3s ease-in-out;
-
-}  
-
-.cat:hover{
-    bottom: -40px; /* Move a imagem 10 pixels para baixo ao passar o mouse */
+ footer .cat {
+  background-image: url(../assets/icons/cat.png);
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  left: 50%;
+  bottom: 0; /* <<<<<<<<<<<<<<<< Volte para 0 */
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease-in-out;
+  z-index: 10;
 }
+
+footer .cat:hover {
+  bottom: -35px; /* <<<<<<<<<<<<<<<< Volte para um valor menor */
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+
+}
+  @media (max-width: 620px) {
+    /* Centraliza a janela e remove a largura fixa */
+    #container {
+        width: 95%; /* Ocupa quase toda a tela */
+    }
+
+    /* Faz o conteúdo principal ser em coluna em vez de lado a lado */
+    main.apresentacao {
+        flex-direction: column; /* Coloca a imagem embaixo do texto */
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .imgduda {
+        margin: 15px 0 0 0; /* Ajusta a margem da imagem */
+    }
