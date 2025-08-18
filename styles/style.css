@@ -5,6 +5,28 @@
     margin: 0; /*altera a margem de todos os elementos da página para 0*/
     padding: 0; /*altera o espaçamento interno de todos os elementos da página  para 0*/
 }
+.star {
+    position: fixed;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    z-index: 9999;
+    animation: stars 1s forwards;
+    user-select: none;
+    filter: drop-shadow(0 0 3px white);
+  }
+  
+  @keyframes stars {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.5);
+    }
+
+}
 
 @font-face {
     font-family: 'MSP Gothic';
@@ -76,6 +98,7 @@
     z-index: 2; /*coloca o efeito acima de tudo*/
     background-size: 3px 100%;
     pointer-events: none; /*impede que o efeito interfira na interação do usuário com a página*/   
+
 }
 
  /*container da janela*/
@@ -117,13 +140,14 @@
     padding:10px;
     padding-top: 67px ;
     margin: 10px;
+    margin-top: -10px;
     background-color:var(--branco);
     border:1px solid #848484;
-    margin-top: -10px;
     background-image: url('../assets/imgs/divider.png');
     background-repeat: no-repeat;
     background-size: 100%;
     display: block;
+    background-position: top;
 
 }
 
@@ -159,99 +183,131 @@
     margin-bottom: 2px;
  }
 
-/*barra de menu*/
-ul[role=menubar]{
-    background:var(--barrademenu);
-    padding:3px 6px;
+ /*barra de menu*/
+ .main-menu > ul {
+    background: var(--barrademenu);
+    padding: 3px 6px;
     margin-top: -2px;
     margin-bottom: -2px;
-}
-
-/*menu texto*/
-li[role=menuitem]{
-    display: inline-flex;
-    font-size:12px;
-    font-family: 'MS PGothic';
-    font-style: normal;
-    font-weight: 300;
-    text-transform: lowercase; 
-    color:var(--preto);
-    padding:6px 10px;
-    position:relative;
-}
-
-/*menu texto ao passar o mouse*/
-li[role=menuitem]:hover{
-    background:var(--preto);
-    color:var(--branco);
-    outline:none;
-    cursor:pointer;
-    transition: all .2s ease-in-out;
-    display: inline-flex;
-}
-
-/*submenu*/
-ul[role=submenu]{
-    background: var(--branco);
-    border: 1px solid var(--preto);
-    box-shadow: 4px 4px 3px -2px var(--preto);
-    min-width: 150px;
-    padding: 2px;
-    display:none;
-    left:0px;
-    position:absolute;
-    top:100%;
-    z-index:99;
-    
-}
-
-/*barrinha lateral do submenu*/
-ul[role=submenu]:before{
-    box-shadow:inset 1px 0 #f0f0f0, inset -1px 0 var(--branco);
-    content:"";
-    height:calc(100% - 4px);
-    left: 25px;
-    pointer-events:none;
-    position:absolute;
-    width:2px;
-}
-
-/*abrir submenu*/
-:hover>[role=submenu]{
-    display:block;
- }
-
-/*submenu texto*/
-li[role=submenuitem]{
-    display: flex;
-    font-size:12px;
-    font-family: 'MS PGothic';
-    font-style: normal;
-    font-weight: 300;
-    text-transform: lowercase; 
-    color:var(--preto);
-    padding:7px 10px;
+  }
+   
+  .main-menu > ul > li {
+    display: inline-block;
     position: relative;
+  }
+
+/*texto do menu*/
+  .main-menu > ul > li > a {
+    display: block;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-family: 'MS PGothic', sans-serif;
+    color: var(--preto);
     text-decoration: none;
+    text-transform: lowercase;
+    transition: 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+   
+/*menu ao passar o mouse*/
+  .main-menu > ul > li > a:hover,
+  .main-menu > ul > li > a:focus {
+    background: var(--preto);
+    color: var(--branco);
+    outline: none;
+  }
+  
+/*submenu*/
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+    border: 1px solid #a1a1a1;
+    box-shadow: 4px 4px 3px -2px rgba(0,0,0,0.3);
+    min-width: 150px;
     background: var(--branco);
-    left: 29px;
-    width: 99px;
+    padding: 2px; 
+  }
+
+
+  .has-submenu:hover > .submenu,
+  .has-submenu:focus-within > .submenu {
+    display: block;
+  }
+   
+/*barrinha lateral do submenu*/
+  .submenu::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 25px;
+    width: 2px;
+    height: calc(100% - 4px);
+    background: linear-gradient(to right, #f0f0f0, #f0f0f0 1px, var(--branco) 1px, var(--branco));
+    pointer-events: none;
+  }
+   
+
+  .submenu li {
+    display: block;
+  }
+   
+/*links do submenu*/
+  .submenu li a {
+    display: block; 
+    color: var(--preto); 
+    text-decoration: none; 
+    padding: 6px 10px 6px 35px;
+    font-family: 'MS PGothic', sans-serif;
+    font-size: 12px;
+    text-transform: lowercase;
+  }
+   
+ /*submenu ao passar o mouse*/
+  .submenu li a:hover,
+  .submenu li a:focus {
+    background: var(--submenu);
+    border: 1px solid;
+    border-color: #a1a1a1;
+    border-radius: 3px;
+    margin: -1px;
+    padding: 6px 10px 6px 35px;
+    position: relative; 
+    z-index: 1; 
 }
 
-/*submenu texto ao passar o mouse*/
-li[role=submenuitem]:hover{
-   background: var(--submenu);
-   width: 99px;
-   border: 1px solid var(--preto);
-   border-radius: 3px;
-   display:block;
+div.imgalert {
+  background-image: url(../assets/imgs/hearts.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 236px;
+  padding: 40px 0px 0px 0px;
+  display: block;
+  margin: auto;
+  transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
 }
 
-/*link âncora*/
-a{
-   color:var(--preto);
-   transition-duration:.4s;
-   text-decoration: none;
+div.imgalert:hover{
+  filter: invert(50%);
+  transform: scale(0.95); /*altera o tamanho da imagem quando o mouse passa por cima*/
+}
+
+p.alert_titulo {
+  padding: 0px 0px 0px 0px;
+  font-family: 'MS PGothic';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+}
+
+div.dotteddivider {
+  border: none;
+  border-top: 1px dotted #000;
+  margin: 10px -10px 10px -10px;
 }
 
 /*barra de rolagem*/
@@ -300,3 +356,20 @@ a{
      border:1.5px solid #888;
      border-radius:3px;
  }
+
+ main.cat{
+    background-image: url(../assets/icons/cat.png);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease-in-out;
+
+}  
+
+.cat:hover{
+    bottom: -40px; /* Move a imagem 10 pixels para baixo ao passar o mouse */
+}
