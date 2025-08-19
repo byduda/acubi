@@ -1,6 +1,4 @@
-// scripts.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Som do clique
     const clicksound = new Audio('./assets/sounds/clicksound.wav');
     
     function tocarSom() {

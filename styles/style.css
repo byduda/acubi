@@ -2,281 +2,282 @@
 
 /*reset de CSS, deixa toda a pré-padronização da página resetada para ser redefinida*/
 *{
-    margin: 0; /*altera a margem de todos os elementos da página para 0*/
-    padding: 0; /*altera o espaçamento interno de todos os elementos da página  para 0*/
+  margin: 0;
+  padding: 0;
 }
-.star {
-    position: fixed;
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    z-index: 9999;
-    animation: stars 1s forwards;
-    user-select: none;
-    filter: drop-shadow(0 0 3px white);
+
+@keyframes stars {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
-  
-  @keyframes stars {
-    0% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(-20px) scale(0.5);
-    }
-
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.5);
+  }
 }
 
-@font-face {
-    font-family: 'MSP Gothic';
-    src: url('../assets/fonts/ms-pgothic-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+@font-face{
+  font-family: 'MSP Gothic';
+  src: url('../assets/fonts/ms-pgothic-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*variáveis*/
 :root{
-    --efeitovidro: linear-gradient(135deg,#fff5 70px,transparent 100px),
-                   linear-gradient(225deg,#fff5 70px,transparent 100px),
-                   linear-gradient(54deg, #0002 0 4%,
-                                          #0002 15% 16%,
-                                          #0002 23% 24%,
-                                          #bbb2 25% 26%,
-                                          #0002 31% 33%,
-                                          #0002 34% 34.5%,
-                                          #bbb2 36% 40%,
-                                          #0002 41% 41.5%,
-                                          #bbb2 44% 45%,
-                                          #bbb2 46% 47%,
-                                          #0002 48% 49%,
-                                          #0002 50% 50.5%,
-                                          #0002 56% 56.5%,
-                                          #bbb2 57% 63%,
-                                          #0002 67% 69%,
-                                          #aaa2 85% 86%,
-                                          #0002 87%) left center/100vw 100vh no-repeat fixed;
-    --efeitoanalogico: linear-gradient(90deg, #ff00000f,
-                                              #00ff0005,
-                                              #0000ff0f);
-    --barrademenu: linear-gradient(#ffffff80 
-                               20%,#ffffff80 
-                               25%,#0000000d 
-                               43%,#0000001a 
-                               48%,#0000000d);
-    --submenu: linear-gradient(hsla(0,0%,100%,.5) 20%,
-                               hsla(0,0%,100%,.5) 25%,
-                               rgba(0,0,0,.0509804) 43%,
-                               rgba(0,0,0,.1) 48%,
-                               rgba(0,0,0,.0509804));
-    --preto: #000;
-    --branco: #fff;
+  --efeitovidro: linear-gradient(135deg,#fff5 70px,transparent 100px),
+                 linear-gradient(225deg,#fff5 70px,transparent 100px),
+                 linear-gradient(54deg, #0002 0 4%,
+                                        #0002 15% 16%,
+                                        #0002 23% 24%,
+                                        #bbb2 25% 26%,
+                                        #0002 31% 33%,
+                                        #0002 34% 34.5%,
+                                        #bbb2 36% 40%,
+                                        #0002 41% 41.5%,
+                                        #bbb2 44% 45%,
+                                        #bbb2 46% 47%,
+                                        #0002 48% 49%,
+                                        #0002 50% 50.5%,
+                                        #0002 56% 56.5%,
+                                        #bbb2 57% 63%,
+                                        #0002 67% 69%,
+                                        #aaa2 85% 86%,
+                                        #0002 87%) left center/100vw 100vh no-repeat fixed;
+  --efeitoanalogico: linear-gradient(90deg, #ff00000f,
+                                            #00ff0005,
+                                            #0000ff0f);
+  --barrademenu: linear-gradient(#ffffff80 
+                             20%,#ffffff80 
+                             25%,#0000000d 
+                             43%,#0000001a 
+                             48%,#0000000d);
+  --submenu: linear-gradient(hsla(0,0%,100%,.5) 20%,
+                             hsla(0,0%,100%,.5) 25%,
+                             rgba(0,0,0,.0509804) 43%,
+                             rgba(0,0,0,.1) 48%,
+                             rgba(0,0,0,.0509804));
+  --preto: #000;
+  --branco: #fff;
+}
+
+/*estrelinhas do cursor*/
+.star{
+  position: fixed;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  z-index: 9999;
+  animation: stars 1s forwards;
+  user-select: none;
+  filter: drop-shadow(0 0 3px white);
 }
 
 /*seleção de texto*/ 
- ::selection{
-     background: var(--preto);
-     color: var(--branco);
+::selection{
+  background: var(--preto);
+  color: var(--branco);
  }
 
  /*imagem de fundo*/
- body{
-     margin:0;
-     background-image: url('../assets/imgs/background.jpg');
-     background-size:cover;
-     background-attachment:fixed;
+body{
+  margin:0;
+  background-image: url('../assets/imgs/background.jpg');
+  background-size:cover;
+  background-attachment:fixed;
  }
 
 /*efeito pixel tv analógica*/
- body:after {
-    content: " ";
-    display: block;
-    position: fixed;
-    inset: 0; /*equivale a top, left, bottom, right*/
-    background: var(--efeitoanalogico);
-    z-index: 2; /*coloca o efeito acima de tudo*/
-    background-size: 3px 100%;
-    pointer-events: none; /*impede que o efeito interfira na interação do usuário com a página*/   
-
+body:after{
+  content: "";
+  display: block;
+  position: fixed;
+  background: var(--efeitoanalogico);
+  z-index: 2;
+  background-size: 3px 100%;
+  pointer-events: none;
+  inset: 0;
 }
 
- /*container da janela*/
- #container{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%); 
-    position: fixed;
-    width: 90%; /* Ocupa 90% da largura da tela */
-    max-width: 590px; /* Mas não passa de 590px */
- }
+/*container da janela*/
+#container{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  position: fixed;
+  width: 90%;
+  max-width: 600px;
+}
 
 /*sombra do fundo do container*/
-.window{ 
-    border:1px solid var(--preto);
-    box-shadow:2px 2px 10px 1px #4f4f4f,
-                inset 0 0 0 1px #fffa;
-    position:relative;
-    z-index:0;
-    border-radius: 6px;
-    backdrop-filter:blur(4px);
+div.window{ 
+  border:1px solid var(--preto);
+  box-shadow:2px 2px 10px 1px #4f4f4f,
+              inset 0 0 0 1px #fffa;
+  position:relative;
+  z-index:0;
+  border-radius: 6px;
+  backdrop-filter:blur(4px);
 }
 
 /*lateral de dentro do container*/
-.window-body{
-    background: #f0f0f0;
-    border: 1px solid var(--preto);
-    box-shadow: 0 0 0 1px #fffa;
-    margin: 6px;
-    margin-top: 0;
-    overflow:auto;
-    height: 80vh; /* Define a altura ideal como 80% da altura da tela (viewport-height) */
-    max-height: 570px; /* Impede que a janela fique maior que 570px em telas muito altas */
-    min-height: 450px; /* Garante que a janela não fique pequena demais em telas baixas */
- }
+div.window_body{
+  background: #f0f0f0;
+  border: 1px solid var(--preto);
+  box-shadow: 0 0 0 1px #fffa;
+  margin: 6px;
+  margin-top: 0;
+  overflow:auto;
+  height: 80vh;
+  max-height: 570px; /* impede que a janela fique maior que 570px em telas muito altas */
+  min-height: 350px; /* garante que a janela não fique pequena demais em telas baixas */
+}
 
 /*dentro do container com divisória*/
 #postsdivider{
-    padding:10px;
-    padding-top: 67px ;
-    margin: 10px;
-    margin-top: -10px;
-    background-color:var(--branco);
-    border:1px solid #848484;
-    background-image: url('../assets/imgs/divider.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    display: block;
-    background-position: top;
-
+  padding:10px;
+  padding-top: 65px ;
+  margin: 10px;
+  margin-top: -10px;
+  background-color:var(--branco);
+  border:1px solid #848484;
+  background-image: url('../assets/imgs/divider.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  background-position: top;
 }
 
 /*dentro do container sem divisória*/
 #posts{
-    padding:10px;
-    margin: 10px;
-    background-color:var(--branco);
-    border:1px solid #848484;
-    margin-top: -10px;
-    display: block;
-
+  padding:10px;
+  margin: 10px;
+  background-color:var(--branco);
+  border:1px solid #848484;
+  margin-top: -10px;
+  display: block;
 }
 
 /*título da página do lado do icon*/
-.title-bar{
-    border-radius: 6px;
-    display:flex;
-    padding: 5px;
-    padding-left: 5px;
-    background:var(--efeitovidro);
- }
+div.title-bar{
+  border-radius: 6px;
+  display:flex;
+  padding: 5px;
+  padding-left: 5px;
+  background:var(--efeitovidro);
+}
 
 /*texto do título da página do lado do icon*/
- .title-bar-text{
-    font-family: 'MS PGothic';
-    font-style: normal;
-    font-weight: 300;
-    color:#4f4f4f;
-    letter-spacing:3px;
-    font-size:11px;
-    margin-top: 1px;
-    margin-bottom: 2px;
+div.title-bar-text{
+  font-family: 'MS PGothic';
+  font-style: normal;
+  font-weight: 300;
+  color:#4f4f4f;
+  letter-spacing:3px;
+  font-size:11px;
+  margin-top: 1px;
+  margin-bottom: 2px;
  }
 
  /*barra de menu*/
- .main-menu > ul {
-    background: var(--barrademenu);
-    padding: 3px 6px;
-    margin-top: -2px;
-    margin-bottom: -2px;
-  }
-   
-  .main-menu > ul > li {
-    display: inline-block;
-    position: relative;
-  }
-
-/*texto do menu*/
-  .main-menu > ul > li > a {
-    display: block;
-    padding: 6px 10px;
-    font-size: 12px;
-    font-family: 'MS PGothic', sans-serif;
-    color: var(--preto);
-    text-decoration: none;
-    text-transform: lowercase;
-    transition: 0.2s ease-in-out, color 0.2s ease-in-out;
-  }
-   
-/*menu ao passar o mouse*/
-  .main-menu > ul > li > a:hover,
-  .main-menu > ul > li > a:focus {
-    background: var(--preto);
-    color: var(--branco);
-    outline: none;
-  }
-  
-/*submenu*/
-  .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 99;
-    border: 1px solid #a1a1a1;
-    box-shadow: 4px 4px 3px -2px rgba(0,0,0,0.3);
-    min-width: 150px;
-    background: var(--branco);
-    padding: 2px; 
-  }
-
-
-  .has-submenu:hover > .submenu,
-  .has-submenu:focus-within > .submenu {
-    display: block;
-  }
-   
-/*barrinha lateral do submenu*/
-  .submenu::before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 25px;
-    width: 2px;
-    height: calc(100% - 4px);
-    background: linear-gradient(to right, #f0f0f0, #f0f0f0 1px, var(--branco) 1px, var(--branco));
-    pointer-events: none;
-  }
-   
-
-  .submenu li {
-    display: block;
-  }
-   
-/*links do submenu*/
-  .submenu li a {
-    display: block; 
-    color: var(--preto); 
-    text-decoration: none; 
-    padding: 6px 10px 6px 35px;
-    font-family: 'MS PGothic', sans-serif;
-    font-size: 12px;
-    text-transform: lowercase;
-  }
-   
- /*submenu ao passar o mouse*/
-  .submenu li a:hover,
-  .submenu li a:focus {
-    background: var(--submenu);
-    border: 1px solid;
-    border-color: #a1a1a1;
-    border-radius: 3px;
-    margin: -1px;
-    padding: 6px 10px 6px 35px;
-    position: relative; 
-    z-index: 1; 
+ nav.main-menu > ul {
+  background: var(--barrademenu);
+  padding: 3px 6px;
+  margin-top: -2px;
+  margin-bottom: -2px;
 }
 
-div.imgalert {
+nav.main-menu > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+/*texto do menu*/
+nav.main-menu > ul > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-family: 'MS PGothic', sans-serif;
+  color: var(--preto);
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+   
+/*menu ao passar o mouse*/
+nav.main-menu > ul > li > a:hover,
+nav.main-menu > ul > li > a:focus {
+  background: var(--preto);
+  color: var(--branco);
+  outline: none;
+}
+  
+/*submenu*/
+ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+  border: 1px solid #a1a1a1;
+  box-shadow: 4px 4px 3px -2px rgba(0,0,0,0.3);
+  min-width: 150px;
+  background: var(--branco);
+  padding: 2px; 
+}
+
+
+li.has-submenu:hover > .submenu,
+li.has-submenu:focus-within > .submenu {
+  display: block;
+}
+   
+/*barrinha lateral do submenu*/
+ul.submenu::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 25px;
+  width: 2px;
+  height: calc(100% - 4px);
+  background: linear-gradient(to right, #f0f0f0, 
+                                        #f0f0f0 1px, 
+                                        var(--branco) 1px, 
+                                        var(--branco));
+  pointer-events: none;
+}
+   
+ul.submenu li {
+  display: block;
+}
+
+/*links do submenu*/
+ul.submenu li a {
+  display: block; 
+  color: var(--preto); 
+  text-decoration: none; 
+  padding: 6px 10px 6px 35px;
+  font-family: 'MS PGothic', sans-serif;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+   
+ /*submenu ao passar o mouse*/
+ul.submenu li a:hover,
+ul.submenu li a:focus {
+  background: var(--submenu);
+  border: 1px solid;
+  border-color: #a1a1a1;
+  border-radius: 3px;
+  margin: -1px;
+  padding: 6px 10px 6px 35px;
+  position: relative; 
+  z-index: 1; 
+}
+
+/*gif de corações pixelart*/
+div.img_alert {
   background-image: url(../assets/imgs/hearts.gif);
   background-repeat: no-repeat;
   background-position: center;
@@ -284,14 +285,16 @@ div.imgalert {
   padding: 40px 0px 0px 0px;
   display: block;
   margin: auto;
-  transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+  transition-duration: 0.20s;
 }
 
-div.imgalert:hover{
+/*gif de corações pixelart ao passar o mouse*/
+div.img_alert:hover{
   filter: invert(50%);
-  transform: scale(0.95); /*altera o tamanho da imagem quando o mouse passa por cima*/
+  transform: scale(0.95);
 }
 
+/*coming soon*/
 p.alert_titulo {
   padding: 0px 0px 0px 0px;
   font-family: 'MS PGothic';
@@ -303,6 +306,7 @@ p.alert_titulo {
   text-transform: uppercase;
 }
 
+/*divisória pontilhada*/
 div.dotteddivider {
   border: none;
   border-top: 1px dotted #000;
@@ -310,70 +314,76 @@ div.dotteddivider {
 }
 
 /*barra de rolagem*/
- ::-webkit-scrollbar{
-     width:13px;
- }
- ::-webkit-scrollbar-track:vertical{
-     background:linear-gradient(90deg,#e5e5e5,#f0f0f0 20%);
-     border-radius:3px;
- }
- ::-webkit-scrollbar-thumb{
-     border:1.5px solid #888;
-     border-radius:3px;
-     box-shadow:inset 0 -1px 1px var(--branco),inset 0 1px 1px var(--branco);
- }
- ::-webkit-scrollbar-thumb:vertical{
-     background:linear-gradient(90deg,#eee 45%,#ddd 0,#bbb);
- }
+::-webkit-scrollbar{
+  width:13px;
+}
 
- ::-webkit-scrollbar-button:vertical{
-     height:10px;
+::-webkit-scrollbar-track:vertical{
+  background:linear-gradient(90deg,#e5e5e5,#f0f0f0 20%);
+  border-radius:3px;
+}
 
- }
- ::-webkit-scrollbar-button:vertical:start{
-     background:var(--branco);
-     background: url('../assets/imgs/scrollstart.png');
-     background-repeat:no-repeat;
-     background-position:center;
-     -moz-background-size:100% auto,cover;
-     -webkit-background-size:100% auto,cover;
-     -o-background-size:100% auto,cover;
-     background-size:100% auto,cover;
-     border:1.5px solid #888;
-     border-radius:3px;
- }
+::-webkit-scrollbar-thumb{
+  border:1.5px solid #888;
+  border-radius:3px;
+  box-shadow:inset 0 -1px 1px var(--branco),inset 0 1px 1px var(--branco);
+}
 
- ::-webkit-scrollbar-button:vertical:end{
-     background:var(--branco);
-     background:url('../assets/imgs/scrollend.png');
-     background-repeat:no-repeat;
-     background-position:center;
-     -moz-background-size:100% auto,cover;
-     -webkit-background-size:100% auto,cover;
-     -o-background-size:100% auto,cover;
-     background-size:100% auto,cover;
-     border:1.5px solid #888;
-     border-radius:3px;
- }
+::-webkit-scrollbar-thumb:vertical{
+  background:linear-gradient(90deg,#eee 45%,#ddd 0,#bbb);
+}
 
- footer .cat {
+::-webkit-scrollbar-button:vertical{
+  height:10px;
+}
+
+::-webkit-scrollbar-button:vertical:start{
+  background:var(--branco);
+  background: url('../assets/imgs/scrollstart.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  -moz-background-size:100% auto,cover;
+  -webkit-background-size:100% auto,cover;
+  -o-background-size:100% auto,cover;
+  background-size:100% auto,cover;
+  border:1.5px solid #888;
+  border-radius:3px;
+}
+
+::-webkit-scrollbar-button:vertical:end{
+  background:var(--branco);
+  background:url('../assets/imgs/scrollend.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  -moz-background-size:100% auto,cover;
+  -webkit-background-size:100% auto,cover;
+  -o-background-size:100% auto,cover;
+  background-size:100% auto,cover;
+  border:1.5px solid #888;
+  border-radius:3px;
+}
+
+/*gatinho do rodapé*/
+footer .cat {
   background-image: url(../assets/icons/cat.png);
   background-size: cover;
   width: 80px;
   height: 80px;
   position: fixed;
   left: 50%;
-  bottom: 0; /* <<<<<<<<<<<<<<<< Volte para 0 */
+  bottom: 0;
   transform: translateX(-50%);
   transition: bottom 0.3s ease-in-out;
   z-index: 10;
 }
 
+/*gatinho do rodapé ao passaro o mouse*/
 footer .cat:hover {
-  bottom: -35px; /* <<<<<<<<<<<<<<<< Volte para um valor menor */
+  bottom: -35px;
 }
 
-.sr-only {
+/*descrições dos icons para acessibilidade*/
+span.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -383,20 +393,4 @@ footer .cat:hover {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
-
 }
-  @media (max-width: 620px) {
-    /* Centraliza a janela e remove a largura fixa */
-    #container {
-        width: 95%; /* Ocupa quase toda a tela */
-    }
-
-    /* Faz o conteúdo principal ser em coluna em vez de lado a lado */
-    main.apresentacao {
-        flex-direction: column; /* Coloca a imagem embaixo do texto */
-        width: 100%; /* Ocupa toda a largura disponível */
-    }
-
-    .imgduda {
-        margin: 15px 0 0 0; /* Ajusta a margem da imagem */
-    }
