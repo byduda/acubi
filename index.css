@@ -1,11 +1,21 @@
  /*home*/
-
 main.apresentacao {
     display: flex; 
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    width: 527px;
+}
+
+/*coluna do texto da apresentacao*/
+section.texto_apresentacao{
+    justify-content: space-between;
+    width: 400px;
+}
+
+/*coluna da img da apresentacao*/
+section.img_apresentacao{
+    justify-content: space-between;
+    width: 200px;
 }
 
 /*icone duda (Hello World)*/
@@ -27,60 +37,6 @@ figure.imgduda {
 .imgduda:hover {
     filter: none;
 }
-
- /*título (Hello World)*/
-h1.apresentacao_titulo {
-    margin:0px 0px 0px 0px;
-    padding:0;
-    font-family: 'MS PGothic';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 22px;
-    letter-spacing:-1px;
-    color:#000;
-    text-align: center;
-    text-transform: uppercase;
-
-}
-
- /*subtítulo (I'm Duda)*/
-h2.apresentacao_subtitulo {
-    margin:0 0 0px 0;
-    padding:0;
-    font-family: 'MS PGothic';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 22px;
-    letter-spacing:2.3px;
-    color: #000;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-/*frase (Coraline)*/
-p.frase{
-    margin:10px 0 15px 0;
-    padding: 0px;
-    font-family: 'MS PGothic';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
-    text-align: center;
-    color:#000;
-}
- 
- /*parágrafo (Sou uma profissional.../Com uma sólida.../Atualmente...)*/
-p.apresentacao_texto{
-     margin:0 0 10px 0;
-     padding:0;
-     font-family: 'MS PGothic';
-     font-style: normal;
-     font-weight: 300;
-     font-size: 14px;
-     letter-spacing:1.5px;
-     text-align: justify;
-     color:#000;
- }
 
 div.redes_sociais{
     margin: 45px 0;
