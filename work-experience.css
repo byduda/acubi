@@ -3,7 +3,7 @@
 main.colunas {
     display: flex; 
     gap: 0px;
-    margin: 20px 0px 0px 0px; /* Este é o problema */
+    margin: 25px 0px 0px 0px;
 
 }
 
@@ -12,21 +12,21 @@ section.timeline {
     display: flex;
     flex-direction: column; 
     align-items: center;   
-    margin: 40px 0px 0px -30px; /* Este é o problema */
+    margin: 40px 0px 0px -30px;
 }
 
 
 /*divisória da timeline*/
 div.dotted_timeline {
-    height: 35px; /* Define a altura da linha */
+    height: 35px;
     width: 0px;
     border-left: 2px dotted #000;
-    margin: 40px 40px 40px 43px; /* Este é o problema */
+    margin: 40px 40px 40px 43px;
 }
 
 /*data da timeline*/
 p.timeline_data{
-    margin: 0px 0px 0px 0px; /* Este é o problema */
+    margin: 0px 0px 0px 0px;
     padding: 0px;
     font-size: 12px;
     text-align: center;
@@ -38,7 +38,7 @@ p.timeline_data{
 section.experiencias{
     min-width: 0px;
     width: 480px;
-    margin: 0px 0px 0px -10px; /* Este é o problema */
+    margin: 0px 0px 0px -10px;
 
 }
 
@@ -68,13 +68,13 @@ p.cargos{
 
 /*texto funçoes realizadas*/
 ul.funcoes {
-    list-style-type: none; /* Remove a bolinha padrão da lista */
-    padding: 0; /* Remove o espaçamento padrão à esquerda */
-    margin: -5px 0px 10px 15px; /* Mantém a mesma margem do parágrafo original */
+    list-style-type: none;
+    padding: 0;
+    margin: -5px 0px 10px 15px;
     text-align: justify;
 }
 
-/* Aplica a formatação do texto aos itens da lista (li) */
+/* formatação do texto aos itens da lista (li) */
 ul.funcoes li {
     font-size: 13px;
     letter-spacing: 1.5px;
