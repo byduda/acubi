@@ -150,8 +150,9 @@ div.window_body{
   background-image: url('../assets/imgs/divider.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  display: block;
   background-position: top;
+  display: block;
+  justify-content: center;
 }
 
 /*dentro do container sem divisória*/
@@ -161,7 +162,8 @@ div.window_body{
   background-color:var(--branco);
   border:1px solid #848484;
   margin-top: -10px;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
  /*texto título*/
@@ -176,6 +178,7 @@ div.window_body{
   color:#000;
   text-align: center;
   text-transform: uppercase;
+
 }
 
  /*texto subtítulo*/
@@ -218,7 +221,7 @@ p.paragrafo{
 }
 
 /*título da página do lado do icon*/
-div.title-bar{
+div.title_bar{
   border-radius: 6px;
   display:flex;
   padding: 5px;
@@ -227,7 +230,7 @@ div.title-bar{
 }
 
 /*texto do título da página do lado do icon*/
-div.title-bar-text{
+div.title_bar_text{
   font-family: 'MS PGothic';
   font-style: normal;
   font-weight: 300;
@@ -239,20 +242,20 @@ div.title-bar-text{
  }
 
  /*barra de menu*/
- nav.main-menu > ul {
+ nav.main_menu > ul {
   background: var(--barrademenu);
   padding: 3px 6px;
   margin-top: -2px;
   margin-bottom: -2px;
 }
 
-nav.main-menu > ul > li {
+nav.main_menu > ul > li {
   display: inline-block;
   position: relative;
 }
 
 /*texto do menu*/
-nav.main-menu > ul > li > a {
+nav.main_menu > ul > li > a {
   display: block;
   padding: 6px 10px;
   font-size: 12px;
@@ -264,12 +267,14 @@ nav.main-menu > ul > li > a {
 }
    
 /*menu ao passar o mouse*/
-nav.main-menu > ul > li > a:hover,
-nav.main-menu > ul > li > a:focus {
+nav.main_menu > ul > li > a:hover,
+nav.main_menu > ul > li > a:focus {
   background: var(--preto);
   color: var(--branco);
   outline: none;
+  display: block;
 }
+
   
 /*submenu*/
 ul.submenu {
@@ -286,8 +291,8 @@ ul.submenu {
 }
 
 
-li.has-submenu:hover > .submenu,
-li.has-submenu:focus-within > .submenu {
+li.has_submenu:hover > .submenu,
+li.has_submenu:focus-within > .submenu {
   display: block;
 }
    
@@ -299,8 +304,8 @@ ul.submenu::before {
   left: 25px;
   width: 2px;
   height: calc(100% - 4px);
-  background: linear-gradient(to right, #f0f0f0, 
-                                        #f0f0f0 1px, 
+  background: linear-gradient(to right, #dbdbdb, 
+                                        #dbdbdb 1px, 
                                         var(--branco) 1px, 
                                         var(--branco));
   pointer-events: none;
@@ -335,7 +340,7 @@ ul.submenu li a:focus {
 }
 
 /*gif de corações pixelart*/
-div.img_alert {
+div.alert_img {
   background-image: url(../assets/imgs/hearts.gif);
   background-repeat: no-repeat;
   background-position: center;
@@ -347,7 +352,7 @@ div.img_alert {
 }
 
 /*gif de corações pixelart ao passar o mouse*/
-div.img_alert:hover{
+div.alert_img:hover{
   filter: invert(50%);
   transform: scale(0.95);
 }
@@ -365,7 +370,7 @@ p.alert_titulo {
 }
 
 /*divisória pontilhada*/
-div.dotted_divider {
+div.divider_dotted {
   border: none;
   border-top: 1px dotted #000;
   margin: 10px -10px 10px -10px;
@@ -423,7 +428,7 @@ div.dotted_divider {
 
 /*gatinho do rodapé*/
 footer .cat {
-  background-image: url(../assets/icons/cat.png);
+  background-image: url(../assets/icons/cat.gif);
   background-size: cover;
   width: 80px;
   height: 80px;

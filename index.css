@@ -1,5 +1,5 @@
  /*home*/
-main.apresentacao {
+main.apresentacao{
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -7,20 +7,20 @@ main.apresentacao {
 }
 
 /*coluna do texto da apresentacao*/
-section.texto_apresentacao{
+section.apresentacao_texto{
     justify-content: space-between;
     width: 400px;
 }
 
 /*coluna da img da apresentacao*/
-section.img_apresentacao{
+section.apresentacao_img{
     justify-content: space-between;
     width: 200px;
 }
 
 /*icone duda (Hello World)*/
-figure.imgduda {
-    background-image: url(./assets/imgs/imgduda.png);
+figure.duda_img{
+    background-image: url(./assets/imgs/duda_img.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 185px;
@@ -34,12 +34,12 @@ figure.imgduda {
     flex-shrink: 0; 
 }
 
-.imgduda:hover {
+.duda_img:hover{
     filter: none;
 }
 
 div.redes_sociais{
-    margin: 45px 0;
+    margin: 10px 0;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -48,7 +48,7 @@ div.redes_sociais{
 }
 
 /* CSS Otimizado para os ícones */
-a.social-icon {
+a.redes_sociais_icons{
     width: 25px;
     height: 25px;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@ a.social-icon {
     transition: filter 0.20s, transform 0.20s;
 }
 
-a.social-icon:hover {
+a.redes_sociais_icons:hover{
     filter: invert(70%);
     transform: scale(1.05);
 }

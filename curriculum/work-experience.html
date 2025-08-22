@@ -5,9 +5,9 @@
       <meta charset="UTF-8"> <!-- exibe todos os assentos, pontuações e carácteres especiais -->
       <meta http-equiv="X-UA-Compatible" content="=IE-Edge"> <!-- utilize a versão mais recente do Edge -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- exibe a página nas escalas dos dispositivos abertos (desktop ou mobile) -->    
-      <link href="./styles/style.css" rel="stylesheet"/> <!-- utiliza a linguagem de estilização CSS para a página -->
-      <link href="./work-experience.css" rel="stylesheet"/> <!-- utiliza a linguagem de estilização CSS para a página -->
-      <link href="./assets/icons/shortcut2.png" rel="shortcut icon"/>
+      <link href="../styles/style.css" rel="stylesheet"/> <!-- utiliza a linguagem de estilização CSS para a página -->
+      <link href="../curriculum/curriculum.css" rel="stylesheet"/> <!-- utiliza a linguagem de estilização CSS para a página -->
+      <link href="../assets/icons/shortcut2.png" rel="shortcut icon"/>
       <!-- título da página -->
       <title>Work Experience</title>
     </head>
@@ -17,27 +17,27 @@
         <!-- barra acima do menu -->
         <div id="container"> 
         <div class="window"> 
-        <div class="title-bar">
-        <div class="title-bar-text"> 
-        <img icon src="./assets/icons/wing.png" alt="Ícone de uma asa estilizada"/>  
+        <div class="title_bar">
+        <div class="title_bar_text"> 
+        <img icon src="../assets/icons/wing.png" alt="Ícone de uma asa estilizada"/>  
         <b>DUDA</b></div>
       </div> 
 
       <!-- menu -->
-      <nav class="main-menu">
+      <nav class="main_menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/index.html">Home</a></li>
 
-          <li class="has-submenu">
+          <li class="has_submenu">
             <a href="#" aria-haspopup="true">Curriculum</a>
               <ul class="submenu">
-                <li><a href="work-experience.html">Work Experience</a></li>
-                <li><a href="link pag cursos" target="_blank">Education</a></li>
+                <li><a href="/curriculum/work-experience.html">Work Experience</a></li>
+                <li><a href="/curriculum/education.html">Education</a></li>
                 <li><a href="link pag certificados" target="_blank">Certifications</a></li>
               </ul>
           </li>
         
-          <li class="has-submenu">
+          <li class="has_submenu">
             <a href="#" aria-haspopup="true">Portfolio</a>
               <ul class="submenu">
                 <li><a href="link pag templates" target="_blank">Templates</a></li>
@@ -45,7 +45,7 @@
               </ul>
           </li>
         
-          <li class="has-submenu">
+          <li class="has_submenu">
             <a href="#" aria-haspopup="true">Contacts</a>
               <ul class="submenu">
                 <li><a href="link pag whatsapp" target="_blank">WhatsApp</a></li>
@@ -60,31 +60,31 @@
         <!-- dentro do container com a divisória -->
         <div id="posts_divider">
 
-          <div class="img_alert"></div>
+          <div class="alert_img"></div>
           <p class="alert_titulo">Coming soon...</p>
 
-          <div class ="dotted_divider"></div>
+          <div class ="divider_dotted"></div>
 
           <h1 class="titulo">Work Experience</h1>
 
           <main class="colunas">
             <section class="timeline">
               <p class="timeline_data">mai/25 - atual</p>
-              <div class ="dotted_timeline"></div>
+              <div class ="timeline_divider" style="height: 25px;"></div>
               <p class="timeline_data">dez/24 - abr/25</p>
-              <div class ="dotted_timeline"></div>
+              <div class ="timeline_divider" style="height: 45px;"></div>
               <p class="timeline_data">nov/22 - jul/24</p>
-              <div class ="dotted_timeline"></div>
+              <div class ="timeline_divider" style="height: 35px;"></div>
               <p class="timeline_data">mai/22 - ago/22</p>
-              <div class ="dotted_timeline"></div>
+              <div class ="timeline_divider" style="height: 30px;"></div>
               <p class="timeline_data">mar/22 - abr/22</p>
-              <div class ="dotted_timeline"></div>
+              <div class ="timeline_divider" style="height: 35px;"></div>
               <p class="timeline_data">dez/20 - set/21</p>
-              <div class ="dotted_timeline"></div>
+              <div class ="timeline_divider" style="height: 50px;"></div>
               <p class="timeline_data">jan/19 - jun/20</p>
-              <div class ="dotted_timeline"></div>
-              <p class="timeline_data">nov/16 - mar/18</p>
-              <div class ="dotted_timeline"></div>
+              <div class ="timeline_divider" style="height: 55px;"></div>
+              <p class="timeline_data" style="padding: 0px 0px 0px 2px;">nov/16 - mar/18</p>
+              <div class ="timeline_divider" style="height: 25px;"></div>
               <p class="timeline_data">mar/16 - out/16</p>
 
             </section>
@@ -165,6 +165,27 @@
                 </ul>              
               </div>
 
+              <div class="experiencia">
+                <h2 class="empresa">Copercana</h2>
+                <p class="cargos">Auxiliar de Escritório em Geral (Presencial - Sertãozinho)</p>
+                <p class="paragrafo">CIEE Jovem Aprendiz, recepcionista do Financeiro e RH;</p>
+                <ul class="funcoes">
+                  <li>— Atendimento ao cliente.</li>
+                  <li>— Gestão de documentos e contas a pagar.</li>
+                  <li>— Atividades bancárias externas.</li>
+                </ul>              
+              </div>
+
+              <div class="experiencia">
+                <h2 class="empresa">Nexus EPI</h2>
+                <p class="cargos">Alimentador de linha de produção (Presencial - Sertãozinho)</p>
+                <p class="paragrafo">CIEE Jovem Aprendiz;</p>
+                <ul class="funcoes">
+                  <li>— Controle de qualidade.</li>
+                  <li>— Armazenamento.</li>
+                </ul>              
+              </div>
+
             </section>
 
             
@@ -191,7 +212,7 @@
         </footer>
 
           <!-- barulho ao clicar -->
-          <script src="./styles/clicksound.js" defer></script>
+          <script src="../styles/clicksound.js" defer></script>
           <!-- estrelas no cursor -->
-          <script src="./styles/stars-cursor.js" defer></script>
+          <script src="../styles/stars-cursor.js" defer></script>
       </body>
