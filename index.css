@@ -10,12 +10,13 @@ main.apresentacao{
 section.apresentacao_texto{
     justify-content: space-between;
     width: 330px;
+    width: 65%;
 }
 
 /*coluna da img da apresentacao*/
 section.apresentacao_img{
     justify-content: space-between;
-    width: 200px;
+    width: 35%;
 }
 
 /*icone duda (Hello World)*/
