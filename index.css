@@ -9,7 +9,7 @@ main.apresentacao{
 /*coluna do texto da apresentacao*/
 section.apresentacao_texto{
     justify-content: space-between;
-    width: 400px;
+    width: 65%;
 }
 
 /*coluna da img da apresentacao*/
