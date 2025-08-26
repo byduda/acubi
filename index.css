@@ -4,12 +4,12 @@ main.apresentacao{
     justify-content: space-between;
     align-items: center;
     padding: 0px 10px 0px 10px;
+    gap: 10px;
 }
 
 /*coluna do texto da apresentacao*/
 section.apresentacao_texto{
     justify-content: space-between;
-    width: 330px;
     width: 65%;
 }
 
