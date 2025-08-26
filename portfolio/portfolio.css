@@ -1,0 +1,203 @@
+ /*templates/pixelart*/
+
+main.colunas {
+    display: flex; 
+    gap: 0px;
+    margin: 25px 0px 0px 0px;
+    gap: 10px;
+}
+
+div.template{
+    display: block;
+    padding: 0;
+    width: 280px;
+    text-shadow: none;
+    border-radius: 10px;
+    background-image: none !important;
+    border: 1px solid #292929;
+    box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.2);
+    transition: none;
+}
+  
+div.template figure {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 168px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 1px dotted #000000;
+    transition: border 0.3s ease 0.1s;
+}
+  
+div.template:hover figure {
+    border-color: transparent;
+    transition-delay: 0;
+}
+  
+div.template figure:before {
+    content: '';
+    position: absolute;
+    z-index: 9;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff83;
+    transition: 0.3s ease 0.1s;
+  }
+  
+  div.template figure:after {
+    content: '';
+    background: url(/assets/icons/zoom-in.svg) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 10;
+  }
+  
+  div.template:hover figure:before,
+  div.template:hover figure:after {
+    opacity: 1;
+    transition-delay: 0;
+  }
+  
+  div.template figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .template_titulo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 24px;
+    color: rgb(var(--bodyTextColor));
+  }
+  
+  .template_titulo h6 {
+    margin: 0 auto 0 0;
+    font-size: 13px;
+
+}
+  
+  .template_titulo i.fx,
+  .template_titulo span {
+    margin-left: 12px;
+  }
+
+  .template_titulo span {
+    font-size: 13px;
+
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(112, 112, 112, 0.6);
+    display: none; /* Começa escondido */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px); /* Reutiliza o efeito de desfoque */
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 700px; /* Um pouco maior que o container principal */
+    position: relative;
+    /* As classes .window e .title_bar do style.css já estilizam a janela */
+}
+
+.modal-body {
+    padding: 15px;
+    background-color: #f0f0f0; /* Fundo consistente */
+    max-height: 70vh; /* Limita a altura para não sair da tela */
+    overflow-y: auto; /* Adiciona scroll se o conteúdo for grande */
+}
+
+.modal-body img {
+    display: block;
+    width: 100%;
+    max-width: 100%; /* Garante que a imagem não ultrapasse o modal */
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border: 1px solid #848484;
+}
+
+.modal-body img {
+    display: block;
+    width: 100%;
+    max-width: 100%; /* Garante que a imagem não ultrapasse o modal */
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border: 1px solid #848484;
+}
+
+.modal-body h6 {
+    font-family: 'MS PGothic';
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.modal-body .paragrafo {
+    font-size: 13px; /* Um pouco menor para descrições */
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+/* Botão de fechar */
+.modal-close-btn {
+    border: 1px solid #848484;
+    width: 50px;
+    height: 22px;
+    cursor: pointer;
+    margin: -6px 0px 0px 595px;
+    box-shadow: 1px 1px 0px #fff;
+    background: url(../assets/icons/close_button.png) no-repeat 50%, var(--w7-wct-bg), var(--w7-wct_close-bg);
+    box-shadow: var(--w7-wct-sd);
+    border-radius: 0px 0px 5px 5px;
+    filter: grayscale(100%) drop-shadow(0px 4px 4px rgba(114, 114, 114, 0.25));
+    transition-duration: 0.40s;
+}
+
+.modal-close-btn:hover {
+    background: url(../assets/icons/close_button.png) no-repeat 50%, var(--w7-wct-bg), var(--w7-wct_close-bg);
+    border-bottom-right-radius: var(--w7-wct-bdr);
+    box-shadow: 0 0 7px 3px #e68e75, var(--w7-wct-sd);
+    content: "";
+    filter: none;
+    transition-duration: 0.60s;
+}
+
+
+:root {
+    --w7-w-space: 6px;
+    --w7-w-bd: #000000b3;
+    --w7-w-bdr: 6px;
+    --w7-w-bg: #4580c4;
+    --w7-w-glass: linear-gradient(135deg, #fff5 70px, transparent 100px), linear-gradient(225deg, #fff5 70px, transparent 100px), linear-gradient(54deg, #0002 0 4%, #6661 6% 6%, #0002 8% 10%, #0002 15% 16%, #aaa1 17% 18%, #0002 23% 24%, #bbb2 25% 26%, #0002 31% 33%, #0002 34% 34.5%, #bbb2 36% 40%, #0002 41% 41.5%, #bbb2 44% 45%, #bbb2 46% 47%, #0002 48% 49%, #0002 50% 50.5%, #0002 56% 56.5%, #bbb2 57% 63%, #0002 67% 69%, #bbb2 69.5% 70%, #0002 73.5% 74%, #bbb2 74.5% 79%, #0002 80% 84%, #aaa2 85% 86%, #0002 87%, #bbb1 90%) left center / 100vw 100vh no-repeat fixed;
+    --w7-w-grad: linear-gradient(to right, #ffffff66, #0000001a, #ffffff33), var(--w7-w-bg);
+    --w7-wct-bd: #0000004d;
+    --w7-wct-bdr: 5px;
+    --w7-wct-sd: inset 0 0 0 1px #fffa;
+    --w7-wct-bg: linear-gradient(#ffffff80, #ffffff4d 45%, #0000001a 50%, #0000001a 75%, #ffffff80);
+    --w7-wct-bg-h: radial-gradient(circle at bottom, #2aceda, transparent 65%), linear-gradient(#b6d9ee 50%, #1a6ca1 0);
+    --w7-wct-bg-a: radial-gradient(circle at bottom, #0bfdfa, transparent 65%), linear-gradient(#86a7bc 50%, #092747 0);
+    --w7-wct_close-bg: radial-gradient(circle at -60% 50%, #0007 5% 10%, #0000 50%), radial-gradient(circle at 160% 50%, #0007 5% 10%, #0000 50%), linear-gradient(#e0a197e5, #cf796a 25% 50%, #d54f36 50%);
+}
