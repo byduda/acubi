@@ -15,7 +15,7 @@ section.apresentacao_texto{
 /*coluna da img da apresentacao*/
 section.apresentacao_img{
     justify-content: space-between;
-    width: 200px;
+    width: 35%;
 }
 
 /*icone duda (Hello World)*/
