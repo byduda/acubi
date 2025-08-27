@@ -3,7 +3,8 @@ main.apresentacao{
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    padding: 0px 10px 0px 10px;
+    gap: 10px;
 }
 
 /*coluna do texto da apresentacao*/
@@ -21,12 +22,12 @@ figure.duda_img{
     background-image: url(./assets/imgs/duda_img.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 185px;
-    height: 185px;
+    width: 180px;
+    height: 180px;
     border:1px solid #848484;
     border-radius: 3%;
     display: block;
-    margin: 0px 0px 0px 0px;
+    margin: 10px 0px 10px 0px;
     filter: grayscale(100%) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transition-duration: 0.30s;
     flex-shrink: 0; 
