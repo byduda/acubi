@@ -465,9 +465,11 @@ span.sr-only {
 @media (max-width: 768px) {
 
   #container {
-    height: 65vh;
-    max-height: 550px;
-    top: 40%;
+    /* Estas regras ajustam a janela principal para telas menores */
+    width: 95%; /* Ocupa mais da largura da tela */
+    height: 80vh; /* Ajusta a altura em relação à altura da tela */
+    max-height: 600px;
+    top: 50%; /* Centraliza verticalmente */
   }
 
   div.window {
@@ -476,27 +478,28 @@ span.sr-only {
     flex-direction: column;
   }
 
-  /* 3. REGRA PARA O CORPO DA JANELA (CONTEÚDO) */
-  /* Esta regra foi modificada para NÃO ter uma altura própria. */
-  /* Ela vai "crescer" e ocupar o espaço que sobrar dentro da moldura. */
   div.window_body {
-    height: 100%; /* Necessário para o flex-grow funcionar corretamente */
-    flex-grow: 1;  /* Faz esta área crescer e ocupar o espaço vertical disponível */
-    min-height: 0; /* Evita problemas de overflow com o conteúdo interno */
+    height: 100%; 
+    flex-grow: 1;  
+    min-height: 0; 
   }
 
-  /* --- Demais regras para o layout interno --- */
+  /* --- NOVAS REGRAS PARA CORRIGIR O LAYOUT --- */
   main.apresentacao {
-    flex-direction: column; 
-    align-items: center;
+    flex-direction: column; /* ESSA É A MUDANÇA PRINCIPAL: empilha os itens verticalmente */
+    align-items: center;    /* Centraliza os itens no container */
+    gap: 20px;              /* Adiciona um espaço entre a foto e o texto */
   }
 
   section.apresentacao_texto {
-    width: 100%;
+    width: 100%;             /* Faz a seção de texto ocupar toda a largura disponível */
+    text-align: justify;     /* Melhora a leitura em blocos de texto */
   }
 
   section.apresentacao_img {
-    margin-bottom: 25px;
+    /* Reverte a ordem para a imagem aparecer primeiro */
+    order: -1; 
+    margin-bottom: 0; /* Remove a margem que existia para o layout de desktop */
   }
 }
 
