@@ -457,3 +457,67 @@ span.sr-only {
   white-space: nowrap;
   border-width: 0;
 }
+
+/* ================================================================= */
+/* ESTILOS PARA RESPONSIVIDADE (CONTROLANDO A ALTURA VIA #container) */
+/* ================================================================= */
+
+@media (max-width: 768px) {
+
+  #container {
+    height: 65vh;
+    max-height: 550px;
+    top: 40%;
+  }
+
+  div.window {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 3. REGRA PARA O CORPO DA JANELA (CONTEÚDO) */
+  /* Esta regra foi modificada para NÃO ter uma altura própria. */
+  /* Ela vai "crescer" e ocupar o espaço que sobrar dentro da moldura. */
+  div.window_body {
+    height: 100%; /* Necessário para o flex-grow funcionar corretamente */
+    flex-grow: 1;  /* Faz esta área crescer e ocupar o espaço vertical disponível */
+    min-height: 0; /* Evita problemas de overflow com o conteúdo interno */
+  }
+
+  /* --- Demais regras para o layout interno --- */
+  main.apresentacao {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  section.apresentacao_texto {
+    width: 100%;
+  }
+
+  section.apresentacao_img {
+    margin-bottom: 25px;
+  }
+}
+
+/* Aplica estes estilos em telas com largura máxima de 480px (celulares menores) */
+@media (max-width: 480px) {
+
+    h1.titulo, h2.subtitulo {
+        font-size: 20px;
+    }
+
+    p.paragrafo {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    figure.duda_img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #posts_divider {
+        padding-top: 55px;
+    }
+}

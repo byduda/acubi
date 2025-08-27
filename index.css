@@ -1,4 +1,4 @@
- /*home*/
+/*home*/
 main.apresentacao{
     display: flex; 
     justify-content: space-between;
@@ -9,13 +9,11 @@ main.apresentacao{
 /*coluna do texto da apresentacao*/
 section.apresentacao_texto{
     justify-content: space-between;
-    width: 65%;
 }
 
 /*coluna da img da apresentacao*/
 section.apresentacao_img{
     justify-content: space-between;
-    width: 35%;
 }
 
 /*icone duda (Hello World)*/
@@ -36,6 +34,36 @@ figure.duda_img{
 
 .duda_img:hover{
     filter: none;
+}
+
+div.redes_sociais{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+
+}
+
+a.redes_sociais_icons{
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: filter 0.20s, transform 0.20s;
+}
+
+a.redes_sociais_icons:hover{
+    filter: invert(70%);
+    transform: scale(1.05);
+}
+
+a.email { background-image: url(./assets/icons/email.svg); }
+a.figma { background-image: url(./assets/icons/figma.svg); }
+a.github { background-image: url(./assets/icons/github.svg); }
+a.linkedin { background-image: url(./assets/icons/linkedin.svg); }
+a.whatsapp { background-image: url(./assets/icons/whatsapp.svg);
+
 }
 
 div.redes_sociais{
