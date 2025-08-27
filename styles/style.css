@@ -24,6 +24,13 @@
   font-style: normal;
 }
 
+@font-face{
+  font-family: 'gohufont-11';
+  src: url('../assets/fonts/gohufont-11.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*variáveis*/
 :root{
   --efeitovidro: linear-gradient(135deg,#fff5 70px,transparent 100px),
@@ -90,7 +97,6 @@ body{
   font-style: normal;
   font-weight: 300;
   color: #000;
-  font-weight: 300;
  }
 
 /*efeito pixel tv analógica*/
@@ -170,15 +176,17 @@ div.window_body{
  h1.titulo {
   margin:0px 0px 0px 0px;
   padding:0;
-  font-family: 'MS PGothic';
+  font-family: 'gohufont-11';
   font-style: normal;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 23px;
   letter-spacing:-1px;
   color:#000;
   text-align: center;
   text-transform: uppercase;
-
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
 }
 
  /*texto subtítulo*/
@@ -367,6 +375,7 @@ p.alert_titulo {
   text-align: center;
   color: #000;
   text-transform: uppercase;
+
 }
 
 /*divisória pontilhada*/
