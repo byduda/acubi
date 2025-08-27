@@ -458,18 +458,14 @@ span.sr-only {
   border-width: 0;
 }
 
-/* ================================================================= */
-/* ESTILOS PARA RESPONSIVIDADE (CONTROLANDO A ALTURA VIA #container) */
-/* ================================================================= */
-
+/*responsividade celular 768px*/
 @media (max-width: 768px) {
 
   #container {
-    /* Estas regras ajustam a janela principal para telas menores */
-    width: 95%; /* Ocupa mais da largura da tela */
-    height: 80vh; /* Ajusta a altura em relação à altura da tela */
+    width: 95%;
+    height: 80vh;
     max-height: 600px;
-    top: 50%; /* Centraliza verticalmente */
+    top: 50%;
   }
 
   div.window {
@@ -484,43 +480,50 @@ span.sr-only {
     min-height: 0; 
   }
 
-  /* --- NOVAS REGRAS PARA CORRIGIR O LAYOUT --- */
   main.apresentacao {
-    flex-direction: column; /* ESSA É A MUDANÇA PRINCIPAL: empilha os itens verticalmente */
-    align-items: center;    /* Centraliza os itens no container */
-    gap: 20px;              /* Adiciona um espaço entre a foto e o texto */
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
   }
 
   section.apresentacao_texto {
-    width: 100%;             /* Faz a seção de texto ocupar toda a largura disponível */
-    text-align: justify;     /* Melhora a leitura em blocos de texto */
+    width: 100%;
+    text-align: justify;
   }
 
   section.apresentacao_img {
-    /* Reverte a ordem para a imagem aparecer primeiro */
     order: -1; 
-    margin-bottom: 0; /* Remove a margem que existia para o layout de desktop */
+    margin-bottom: 0;
   }
 }
 
-/* Aplica estes estilos em telas com largura máxima de 480px (celulares menores) */
-@media (max-width: 480px) {
+/*responsividade notebook 1920px*/
+@media (max-width: 1920px) {
+  #container {
+    height: 70vh;
+    top: 40%;
+    max-width: 550px;
+  }
 
-    h1.titulo, h2.subtitulo {
-        font-size: 20px;
-    }
+  div.window {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-    p.paragrafo {
-        font-size: 13px;
-        letter-spacing: 1px;
-    }
+  div.window_body {
+    height: 100%; 
+    flex-grow: 1;  
+    min-height: 0; 
+  }
 
-    figure.duda_img {
-        width: 150px;
-        height: 150px;
-    }
+  section.apresentacao_img figure.duda_img {
+    width: 190px;
+    height: 190px;
+  }
 
-    #posts_divider {
-        padding-top: 55px;
-    }
+  main.apresentacao {
+    width: 96%; 
+  }
+
 }
