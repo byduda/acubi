@@ -17,7 +17,7 @@ section.apresentacao_img{
     justify-content: space-between;
 }
 
-/*icone duda (Hello World)*/
+/*icone duda*/
 figure.duda_img{
     background-image: url(./assets/imgs/duda_img.png);
     background-repeat: no-repeat;
@@ -95,4 +95,6 @@ a.email { background-image: url(./assets/icons/email.svg); }
 a.figma { background-image: url(./assets/icons/figma.svg); }
 a.github { background-image: url(./assets/icons/github.svg); }
 a.linkedin { background-image: url(./assets/icons/linkedin.svg); }
-a.whatsapp { background-image: url(./assets/icons/whatsapp.svg);}
+a.whatsapp { background-image: url(./assets/icons/whatsapp.svg);
+
+}

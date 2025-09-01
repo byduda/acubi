@@ -25,8 +25,8 @@
 }
 
 @font-face{
-  font-family: 'gohufont-11';
-  src: url('../assets/fonts/gohufont-11.ttf') format('truetype');
+  font-family: 'Pixel Operator';
+  src: url('../assets/fonts/pixel_operator.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -176,10 +176,10 @@ div.window_body{
  h1.titulo {
   margin:0px 0px 0px 0px;
   padding:0;
-  font-family: 'gohufont-11';
+  font-family: 'Pixel Operator';
   font-style: normal;
   font-weight: 300;
-  font-size: 23px;
+  font-size: 30px;
   letter-spacing:-1px;
   color:#000;
   text-align: center;
@@ -210,7 +210,7 @@ p.quote{
   font-family: 'MS PGothic';
   font-style: normal;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-align: center;
   color:#000;
 }
@@ -222,10 +222,11 @@ p.paragrafo{
    font-family: 'MS PGothic';
    font-style: normal;
    font-weight: 300;
-   font-size: 14px;
+   font-size: 0.9rem;
    letter-spacing:1.5px;
    text-align: justify;
    color:#000;
+  
 }
 
 /*título da página do lado do icon*/
@@ -504,35 +505,4 @@ span.sr-only {
     order: -1; 
     margin-bottom: 0;
   }
-}
-
-/*responsividade notebook 1920px*/
-@media (max-width: 1920px) {
-  #container {
-    height: 70vh;
-    top: 40%;
-    max-width: 550px;
-  }
-
-  div.window {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  div.window_body {
-    height: 100%; 
-    flex-grow: 1;  
-    min-height: 0; 
-  }
-
-  section.apresentacao_img figure.duda_img {
-    width: 190px;
-    height: 190px;
-  }
-
-  main.apresentacao {
-    width: 96%; 
-  }
-
 }
