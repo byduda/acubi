@@ -95,6 +95,7 @@ a.email { background-image: url(./assets/icons/email.svg); }
 a.figma { background-image: url(./assets/icons/figma.svg); }
 a.github { background-image: url(./assets/icons/github.svg); }
 a.linkedin { background-image: url(./assets/icons/linkedin.svg); }
-a.whatsapp { background-image: url(./assets/icons/whatsapp.svg);
+a.whatsapp { background-image: url(./assets/icons/whatsapp.svg); }
+a.wing1 { background-image: url(./assets/icons/wing1.gif); }
+a.wing2 { background-image: url(./assets/icons/wing2.gif); }
 
-}
