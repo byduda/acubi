@@ -176,10 +176,10 @@ div.window_body{
  h1.titulo {
   margin:0px 0px 0px 0px;
   padding:0;
-  font-family: 'Pixel Operator';
+  font-family: 'MS PGothic';
   font-style: normal;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 22px;
   letter-spacing:-1px;
   color:#000;
   text-align: center;
@@ -195,7 +195,7 @@ div.window_body{
   padding:0;
   font-family: 'MS PGothic';
   font-style: normal;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 12px;
   letter-spacing:2.3px;
   color: #000;
@@ -468,8 +468,8 @@ span.sr-only {
   border-width: 0;
 }
 
-/*responsividade celular 768px*/
-@media (max-width: 768px) {
+/*responsividade menor que 1220px, geralmente celular/tablet*/
+@media (max-width: 1220px) {
 
   #container {
     width: 95%;
@@ -507,11 +507,11 @@ span.sr-only {
   }
 }
 
-/* Ajustes para telas com largura máxima de 1024px (ou menos, ajuste conforme necessário) */
-@media (max-width: 1300px) { /* Ajuste este valor, pode ser a resolução do seu notebook */
+/*responsividade menor que 2560px, geralmente monitor menor/notebook (dps alterar pra que for menor que meu monitor)*/
+@media (max-width: 2560px) {
   
   #container {
-    width: 45%;
+    width: 43%;
     height: 80vh;
     max-height: 600px;
     top: 45%;
@@ -522,5 +522,17 @@ span.sr-only {
     display: flex;
     flex-direction: column;
   }
+
+  footer .cat {
+  width: 70px;
+  height: 70px;
+
+
+
+}
+
+h2.empresa {
+  font-family: 'MS PGothic';
+  font-size: 14px;
 
 }
