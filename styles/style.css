@@ -179,7 +179,7 @@ div.window_body{
   font-family: 'MS PGothic';
   font-style: normal;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 1.375rem;
   letter-spacing:-1px;
   color:#000;
   text-align: center;
@@ -196,7 +196,7 @@ div.window_body{
   font-family: 'MS PGothic';
   font-style: normal;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 1.375rem;
   letter-spacing:2.3px;
   color: #000;
   text-align: center;
@@ -222,7 +222,7 @@ p.paragrafo{
    font-family: 'MS PGothic';
    font-style: normal;
    font-weight: 300;
-   font-size: 14px;
+   font-size: 0.875rem;
    letter-spacing:1.5px;
    text-align: justify;
    color:#000;
@@ -267,7 +267,7 @@ nav.main_menu > ul > li {
 nav.main_menu > ul > li > a {
   display: block;
   padding: 6px 10px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: 'MS PGothic', sans-serif;
   color: var(--preto);
   text-decoration: none;
@@ -331,7 +331,7 @@ ul.submenu li a {
   text-decoration: none; 
   padding: 6px 10px 6px 35px;
   font-family: 'MS PGothic', sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: lowercase;
 }
    
@@ -372,7 +372,7 @@ p.alert_titulo {
   font-family: 'MS PGothic';
   font-style: normal;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-align: center;
   color: #000;
   text-transform: uppercase;
@@ -533,9 +533,14 @@ span.sr-only {
   }
 
   h1.titulo {
-  font-size: 12px;
-  letter-spacing:1px;
+  font-size: 0.93rem;
+  letter-spacing:-1px;
   }
+
+ h2.subtitulo {
+  font-size: 0.93rem;
+  letter-spacing:1px;
+}
 
   footer .cat {
   width: 60px;
