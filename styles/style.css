@@ -453,7 +453,7 @@ footer .cat {
   image-rendering: crisp-edges;
 }
 
-/*gatinho do rodapé ao passaro o mouse*/
+/*gatinho do rodapé ao passar o mouse*/
 footer .cat:hover {
   bottom: -35px;
 }
@@ -487,11 +487,19 @@ span.sr-only {
     flex-direction: column;
   }
 
+  h1.titulo {
+    font-size: 0.937rem;
+  }
+
+  h2.subtitulo {
+    font-size: 0.937rem;
+    letter-spacing:1.3px;
+  }
+
   footer .cat {
   width: 70px;
   height: 70px;
   }
-
 }
 
 /*responsividade menor que 400, geralmente celular*/
@@ -533,36 +541,30 @@ span.sr-only {
   }
 
   #posts_divider{
-  background-size: 200%;
+    background-size: 200%;
   }
 
   h1.titulo {
-  font-size: 0.93rem;
-  letter-spacing:-1px;
+    font-size: 0.93rem;
+    letter-spacing:-1px;
   }
 
- h2.subtitulo {
-  font-size: 0.93rem;
-  letter-spacing:1px;
-}
+  h2.subtitulo {
+    font-size: 0.93rem;
+    letter-spacing:1px;
+  }
 
 /*texto parágrafo*/
-p.paragrafo{
-   margin:0 0 10px 0;
-   padding:0;
-   font-family: 'MS PGothic';
-   font-style: normal;
-   font-weight: 300;
-   font-size: 0.688rem;
-   letter-spacing:1.5px;
-   text-align: justify;
-   color:#000;
-  
-}
+  p.paragrafo{
+    font-size: 0.625rem;
+  }
+
+  p.quote{
+    font-size: 0.688rem;
+  }
 
   footer .cat {
-  width: 60px;
-  height: 60px;
-
+    width: 60px;
+    height: 60px;
   }
 }
