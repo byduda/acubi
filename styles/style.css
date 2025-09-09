@@ -341,7 +341,7 @@ ul.submenu li a:focus {
   border-color: #a1a1a1;
   border-radius: 3px;
   margin: -1px;
-  padding: 6px 10px 6px 35px;
+  padding:6.7px 10px 6px 35px;
   position: relative; 
   z-index: 1; 
 }
@@ -356,6 +356,9 @@ div.alert_img {
   display: block;
   margin: auto;
   transition-duration: 0.20s;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: crisp-edges;
 }
 
 /*gif de corações pixelart ao passar o mouse*/
@@ -445,6 +448,9 @@ footer .cat {
   transform: translateX(-50%);
   transition: bottom 0.3s ease-in-out;
   z-index: 10;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: crisp-edges;
 }
 
 /*gatinho do rodapé ao passaro o mouse*/
@@ -484,10 +490,11 @@ span.sr-only {
   footer .cat {
   width: 70px;
   height: 70px;
+  }
 
 }
 
-/*responsividade menor que 375, geralmente celular*/
+/*responsividade menor que 400, geralmente celular*/
 @media (max-width: 400px) {
 
   #container {

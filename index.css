@@ -83,6 +83,9 @@ a.redes_sociais_icons{
     background-repeat: no-repeat;
     background-size: contain;
     transition: filter 0.20s, transform 0.20s;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: crisp-edges;
 }
 
 a.redes_sociais_icons:hover{
@@ -96,15 +99,40 @@ a.figma { background-image: url(./assets/icons/figma.svg); }
 a.github { background-image: url(./assets/icons/github.svg); }
 a.linkedin { background-image: url(./assets/icons/linkedin.svg); }
 a.whatsapp { background-image: url(./assets/icons/whatsapp.svg); }
-a.wing1 { background-image: url(./assets/icons/wing1.gif); }
-a.wing2 { background-image: url(./assets/icons/wing2.gif); 
+
+div.wing1 {
+        background-image: url(./assets/icons/wing11.gif);
+        background-repeat: no-repeat;
+        margin-top: -3px;
+    image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: crisp-edges;
+}
+
+div.wing2 { 
+    background-image: url(./assets/icons/wing2.gif);
+    background-repeat: no-repeat;
+    margin-top: -3px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: crisp-edges;
+}
+
+/*responsividade menor 2560, geralmente notebook/tablet*/
+@media (max-width: 2560px) {
+
+    div.wing1, div.wing2 {
+    width: 34px;
+    height: 29px;
+    background-size: contain;
+}
 
 }
 
 /*responsividade menor que 375, geralmente celular*/
 @media (max-width: 400px) {
 
-a.wing1, a.wing2 {
+    div.wing1, div.wing2 {
     display: none;
 }
 
