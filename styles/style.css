@@ -534,7 +534,6 @@ span.sr-only {
 
   #posts_divider{
   background-size: 200%;
-
   }
 
   h1.titulo {
@@ -545,6 +544,20 @@ span.sr-only {
  h2.subtitulo {
   font-size: 0.93rem;
   letter-spacing:1px;
+}
+
+/*texto parágrafo*/
+p.paragrafo{
+   margin:0 0 10px 0;
+   padding:0;
+   font-family: 'MS PGothic';
+   font-style: normal;
+   font-weight: 300;
+   font-size: 0.688rem;
+   letter-spacing:1.5px;
+   text-align: justify;
+   color:#000;
+  
 }
 
   footer .cat {
