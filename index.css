@@ -40,8 +40,9 @@ figure.duda_img{
 div.redes_sociais{
     margin: 10px 0;
     display: flex;
+    width: 100%;
     justify-content: center;
-    gap: 30px;
+    gap: 10%;
     transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
 
 }
@@ -127,11 +128,11 @@ div.wing2 {
 
 }
 
-/*responsividade menor que 375, geralmente celular*/
-@media (max-width: 400px) {
+/*responsividade menor que 425, geralmente celular*/
+@media (max-width: 426px) {
 
-    div.wing1, div.wing2 {
-        display: none;
-    }
+  div.wing1, div.wing2 {
+    display: none;
+  }
 
 }

@@ -147,7 +147,7 @@ div.window_body{
 
 /*dentro do container com divisória*/
 #posts_divider{
-  padding: 75px 10px 10px 10px;
+  padding: 13% 0% 0% 0%;
   margin: -15px 10px 10px 10px;
   background-color:var(--branco);
   border:1px solid #848484;
@@ -244,16 +244,15 @@ div.title_bar_text{
   color:#4f4f4f;
   letter-spacing:3px;
   font-size:11px;
-  margin-top: 1px;
-  margin-bottom: 2px;
- }
+  margin: 1px 0px 2px 0px;
+}
 
  /*barra de menu*/
  nav.main_menu > ul {
   background: var(--barrademenu);
-  padding: 3px 6px;
-  margin-top: -2px;
-  margin-bottom: -2px;
+  padding: 3px 0px;
+  margin: -2px 0px -2px 0px;
+  width: 100%;
 }
 
 nav.main_menu > ul > li {
@@ -351,8 +350,8 @@ div.alert_img {
   background-image: url(../assets/imgs/hearts.gif);
   background-repeat: no-repeat;
   background-position: center;
-  width: 236px;
-  padding: 40px 0px 0px 0px;
+  background-size: 236px 24px;
+  padding: 50px 0px 0px 0px;
   display: block;
   margin: auto;
   transition-duration: 0.20s;
@@ -383,7 +382,8 @@ p.alert_titulo {
 div.divider_dotted {
   border: none;
   border-top: 1px dotted #000;
-  margin: 10px -10px 10px -10px;
+  margin: 10px 0px 10px 0px;
+  width: 100%;
 }
 
 /*barra de rolagem*/
@@ -471,11 +471,11 @@ span.sr-only {
   border-width: 0;
 }
 
-/*responsividade menor que 2560px, geralmente monitor menor/notebook (dps alterar pra que for menor que meu monitor)*/
-@media (max-width: 2560px) {
+/*responsividade menor que 1280px, geralmente monitor menor/notebook (dps alterar pra que for menor que meu monitor)*/
+@media (max-width: 1280px) {
   
   #container {
-    width: 43%;
+    width: 40%;
     height: 80vh;
     max-height: 600px;
     top: 45%;
@@ -496,14 +496,65 @@ span.sr-only {
     letter-spacing:1.3px;
   }
 
+  p.paragrafo {
+    font-size: 0.799rem;
+  }
+
   footer .cat {
   width: 70px;
   height: 70px;
   }
 }
 
-/*responsividade menor que 400, geralmente celular*/
-@media (max-width: 400px) {
+/*responsividade menor que 768, geralmente tablet*/
+@media (max-width: 769px) {
+
+  #container {
+    width: 70%;
+    height: 100vh;
+    max-height: 600px;
+    top: 60%;
+  }
+
+  div.window {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.window_body {
+    height: 80%; 
+    flex-grow: 1;  
+    min-height: 0; 
+  }
+
+  main.apresentacao {
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+  }
+
+  section.apresentacao_texto {
+    width: 100%;
+    text-align: justify;
+  }
+
+  section.apresentacao_img {
+    order: -1; 
+    margin-bottom: 0;
+  }
+
+}
+
+/*responsividade menor que 425, geralmente celular*/
+@media (max-width: 426px) {
+
+  nav.main_menu > ul {
+    width: 100%;
+    display: flex;
+    gap: 1%;
+    justify-content: space-around;
+  }
 
   #container {
     width: 80%;
@@ -542,6 +593,12 @@ span.sr-only {
 
   #posts_divider{
     background-size: 200%;
+    padding: 20% 0% 0% 0%;
+  }
+
+  div.alert_img {
+    background-size: 100%;
+    margin: 0% 10% 0% 10%;
   }
 
   h1.titulo {
