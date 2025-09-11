@@ -471,7 +471,7 @@ span.sr-only {
   border-width: 0;
 }
 
-/*responsividade menor que 1280px, geralmente monitor menor/notebook (dps alterar pra que for menor que meu monitor)*/
+/*responsividade menor que 2560px (resolução do meu monitor), geralmente monitor menor/notebook*/
 @media (max-width: 1280px) {
   
   #container {
