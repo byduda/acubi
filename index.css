@@ -121,8 +121,8 @@ div.wing2 {
 @media (max-width: 2560px) {
     
     div.wing1, div.wing2 {
-        width: 34px;
-        height: 29px;
+        width: 26px;
+        height: 21px;
         background-size: contain;
     }
 
