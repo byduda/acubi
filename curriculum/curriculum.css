@@ -24,7 +24,6 @@ div.timeline_divider {
 
 /*data da timeline*/
 p.timeline_data{
-    margin: 0px 0px 0px 0px;
     padding: 0px;
     font-size: 12px;
     text-align: center;
@@ -93,4 +92,14 @@ a.download_icon {
 a.download_icon:hover {
     filter: invert(70%);
     transform: scale(1.05);
+}
+
+/*responsividade menor que 2560px (resolução do meu monitor), geralmente monitor menor/notebook*/
+@media screen and (max-width: 2560px) {
+
+    /*coluna da timeline*/
+    section.timeline {
+        margin: 37px 0px 0px -30px;
+    }
+
 }
