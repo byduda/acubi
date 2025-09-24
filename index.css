@@ -1,6 +1,7 @@
 /*home*/
-main.apresentacao{
-    display: flex; 
+main.apresentacao {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 0px 10px 0px 10px;
@@ -8,17 +9,21 @@ main.apresentacao{
 }
 
 /*coluna do texto da apresentacao*/
-section.apresentacao_texto{
+section.apresentacao_texto {
     justify-content: space-between;
+    width: 100%;
+    text-align: justify;
 }
 
 /*coluna da img da apresentacao*/
-section.apresentacao_img{
+section.apresentacao_img {
     justify-content: space-between;
+    order: -1;
+    margin-bottom: 0;
 }
 
 /*icone duda*/
-figure.duda_img{
+figure.duda_img {
     background-image: url(./assets/imgs/duda_img.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,64 +35,34 @@ figure.duda_img{
     margin: 10px 0px 5px 0px;
     filter: grayscale(100%) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transition-duration: 0.30s;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
-.duda_img:hover{
+.duda_img:hover {
     filter: none;
 }
 
-div.redes_sociais{
-    margin: 10px 0;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 10%;
-    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
-
-}
-
-a.redes_sociais_icons{
-    width: 25px;
-    height: 25px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: filter 0.20s, transform 0.20s;
-}
-
-a.redes_sociais_icons:hover{
-    filter: invert(70%);
-    transform: scale(1.05);
-}
-
-a.email { background-image: url(./assets/icons/email.svg); }
-a.figma { background-image: url(./assets/icons/figma.svg); }
-a.github { background-image: url(./assets/icons/github.svg); }
-a.linkedin { background-image: url(./assets/icons/linkedin.svg); }
-a.whatsapp { background-image: url(./assets/icons/whatsapp.svg);
-}
-
-div.redes_sociais{
+div.redes_sociais {
     margin: 10px 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+    gap: 20px; /* Gap inicial para mobile */
+    transition-duration: 0.20s;
 }
 
 /* CSS Otimizado para os ícones */
-a.redes_sociais_icons{
+a.redes_sociais_icons {
     width: 25px;
     height: 25px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     transition: filter 0.20s, transform 0.20s;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges; /* Firefox */
     image-rendering: crisp-edges;
 }
 
-a.redes_sociais_icons:hover{
+a.redes_sociais_icons:hover {
     filter: invert(70%);
     transform: scale(1.05);
 }
@@ -100,6 +75,7 @@ a.linkedin { background-image: url(./assets/icons/linkedin.svg); }
 a.whatsapp { background-image: url(./assets/icons/whatsapp.svg); }
 
 div.wing1 {
+    display: none;
     background-image: url(./assets/icons/wing11.gif);
     background-repeat: no-repeat;
     margin-top: -3px;
@@ -108,7 +84,8 @@ div.wing1 {
     image-rendering: crisp-edges;
 }
 
-div.wing2 { 
+div.wing2 {
+    display: none;
     background-image: url(./assets/icons/wing2.gif);
     background-repeat: no-repeat;
     margin-top: -3px;
@@ -117,22 +94,65 @@ div.wing2 {
     image-rendering: crisp-edges;
 }
 
-/*responsividade menor 2560, geralmente notebook/tablet*/
-@media (max-width: 2560px) {
+/*
+* Media Queries para telas maiores
+*/
+
+/* Para telas a partir de 768px (tablets) */
+@media (min-width: 768px) {
+
+    nav.main_menu > ul {
+        justify-content: start;
+    }
     
+    main.apresentacao {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section.apresentacao_img {
+        order: initial;
+    }
+
+    div.redes_sociais {
+        gap: 35px; /* Aumenta o gap para notebooks */
+    }
+
+    div.redes_sociais {
+        gap: 45px; /* Aumenta o gap para tablets */
+    }
+
     div.wing1, div.wing2 {
         width: 26px;
         height: 21px;
         background-size: contain;
+        display: flex;
     }
-
 }
 
-/*responsividade menor que 425, geralmente celular*/
-@media (max-width: 426px) {
+/* Para telas a partir de 1240px (notebooks) */
+@media (min-width: 1240px) {
+    main.apresentacao {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
 
-  div.wing1, div.wing2 {
-    display: none;
-  }
+    section.apresentacao_img {
+        order: initial;
+    }
+
+    div.redes_sociais {
+        gap: 35px; /* Aumenta o gap para notebooks */
+    }
+
+
+    div.wing1, div.wing2 {
+        width: 26px;
+        height: 21px;
+        background-size: contain;
+        display: flex;
+    }
 
 }

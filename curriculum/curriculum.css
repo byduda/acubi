@@ -1,10 +1,9 @@
- /*work experiences/education/certifications*/
+/*work experiences/education/certifications*/
 
  main.colunas {
     display: flex; 
     gap: 0px;
     margin: 25px 10px 0px 0px;
-
 }
 
 /*coluna da timeline*/
@@ -94,12 +93,12 @@ a.download_icon:hover {
     transform: scale(1.05);
 }
 
-/*responsividade menor que 2560px (resolução do meu monitor), geralmente monitor menor/notebook*/
-@media screen and (max-width: 2560px) {
-
+/*
+* Media Queries para telas maiores
+*/
+@media screen and (min-width: 2560px) {
     /*coluna da timeline*/
     section.timeline {
         margin: 37px 0px 0px -30px;
     }
-
 }
