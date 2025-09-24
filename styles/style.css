@@ -492,7 +492,6 @@ span.sr-only {
   padding: 40px 0px 0px 0px;
   }
 }
-
 /* Media Query para Notebook (1240px ou mais) */
 @media (min-width: 1240px) {
 
@@ -522,5 +521,9 @@ span.sr-only {
 @media (min-width: 1440px) {
   #container {
     width: 35%;
+  }
+
+  #posts_divider {
+    background-size: 150%;
   }
 }

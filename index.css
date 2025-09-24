@@ -147,10 +147,9 @@ div.wing2 {
         gap: 35px; /* Aumenta o gap para notebooks */
     }
 
-
     div.wing1, div.wing2 {
-        width: 26px;
-        height: 21px;
+        width: 34px;
+        height: 29px;
         background-size: contain;
         display: flex;
     }
