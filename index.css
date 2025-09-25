@@ -79,7 +79,7 @@ div.wing1, div.wing2 {
     width: 26px;
     height: 21px;
     background-size: contain;
-    display: block;
+    display: none;
     background-repeat: no-repeat;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
