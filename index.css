@@ -74,24 +74,24 @@ a.github { background-image: url(./assets/icons/github.svg); }
 a.linkedin { background-image: url(./assets/icons/linkedin.svg); }
 a.whatsapp { background-image: url(./assets/icons/whatsapp.svg); }
 
-div.wing1 {
-    display: none;
-    background-image: url(./assets/icons/wing11.gif);
+
+div.wing1, div.wing2 {
+    width: 26px;
+    height: 21px;
+    background-size: contain;
+    display: flex;
     background-repeat: no-repeat;
-    margin-top: -3px;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
 }
 
+div.wing1 {
+    background-image: url(./assets/icons/wing1.gif);
+}
+
 div.wing2 {
-    display: none;
     background-image: url(./assets/icons/wing2.gif);
-    background-repeat: no-repeat;
-    margin-top: -3px;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
 }
 
 /*
@@ -123,12 +123,6 @@ div.wing2 {
         gap: 45px; /* Aumenta o gap para tablets */
     }
 
-    div.wing1, div.wing2 {
-        width: 26px;
-        height: 21px;
-        background-size: contain;
-        display: flex;
-    }
 }
 
 /* Para telas a partir de 1240px (notebooks) */
@@ -147,22 +141,11 @@ div.wing2 {
         gap: 35px; /* Aumenta o gap para notebooks */
     }
 
-    div.wing1, div.wing2 {
+    /*div.wing1, div.wing2 {
         width: 34px;
         height: 29px;
         background-size: contain;
         display: flex;
-    }
-
-}
-
-/* Media Query para Monitores grandes (1920px ou mais) */
-@media (min-width: 1920px) {
-    div.wing1, div.wing2 {
-        width: 26px;
-        height: 21px;
-        background-size: contain;
-        display: flex;
-    }
+    }*/
 
 }
