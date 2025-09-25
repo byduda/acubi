@@ -119,7 +119,7 @@ body:after{
   position: fixed;
   width: 80%; /* Base para mobile */
   max-width: 600px;
-  height: 90%;
+  height: auto;
 }
 
 /*sombra do fundo do container*/
@@ -483,13 +483,13 @@ span.sr-only {
 
 /* Para telas a partir de 768px (tablets) */
 @media (min-width: 768px) {
-    #posts_divider {
+  #posts_divider {
     background-size: 120%;
   }
 
   div.alert_img {
-  background-size: 60%;
-  padding: 40px 0px 0px 0px;
+    background-size: 60%;
+    padding: 40px 0px 0px 0px;
   }
 }
 /* Media Query para Notebook (1240px ou mais) */
@@ -526,4 +526,34 @@ span.sr-only {
   #posts_divider {
     background-size: 150%;
   }
+}
+
+/* Media Query para Monitores grandes (1920px ou mais) */
+@media (min-width: 1920px) {
+  #container {
+    width: 30%;
+  }
+
+  #posts_divider {
+    background-size: 130%;
+  }
+
+    /*texto título*/
+  h1.titulo {
+    font-size: 1.40rem;
+  }
+
+/*texto subtítulo*/
+  h2.subtitulo {
+    font-size: 1.40rem;
+    letter-spacing:2px;
+  }
+  p.paragrafo {
+    font-size: 0.900rem;
+  }
+
+  p.quote{
+    font-size: 0.80rem;
+  }
+
 }
