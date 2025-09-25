@@ -79,7 +79,7 @@ div.wing1, div.wing2 {
     width: 26px;
     height: 21px;
     background-size: contain;
-    display: flex;
+    display: block;
     background-repeat: no-repeat;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
@@ -123,6 +123,9 @@ div.wing2 {
         gap: 45px; /* Aumenta o gap para tablets */
     }
 
+    div.wing1, div.wing2 {
+        display: flex;
+
 }
 
 /* Para telas a partir de 1240px (notebooks) */
@@ -140,6 +143,9 @@ div.wing2 {
     div.redes_sociais {
         gap: 35px; /* Aumenta o gap para notebooks */
     }
+
+    div.wing1, div.wing2 {
+        display: flex;
 
     /*div.wing1, div.wing2 {
         width: 34px;
