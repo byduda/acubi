@@ -119,7 +119,7 @@ body:after{
   position: fixed;
   width: 80%; /* Base para mobile */
   max-width: 600px;
-  height: auto;
+  height: 90%; /* Base para mobile */
 }
 
 /*sombra do fundo do container*/
@@ -491,7 +491,9 @@ span.sr-only {
     background-size: 60%;
     padding: 40px 0px 0px 0px;
   }
+
 }
+
 /* Media Query para Notebook (1240px ou mais) */
 @media (min-width: 1240px) {
 
@@ -502,6 +504,7 @@ span.sr-only {
   #container {
     width: 40%;
     top: 50%;
+    height: auto;
   }
 
   div.window_body {
@@ -521,6 +524,7 @@ span.sr-only {
 @media (min-width: 1440px) {
   #container {
     width: 35%;
+    height: auto;
   }
 
   #posts_divider {
@@ -532,6 +536,7 @@ span.sr-only {
 @media (min-width: 1920px) {
   #container {
     width: 30%;
+    height: auto;
   }
 
   #posts_divider {
