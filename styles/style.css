@@ -178,7 +178,7 @@ div.window_body{
 h1.titulo {
   margin:0px 0px 0px 0px;
   padding:0;
-  font-family: 'MS PGothic';
+  font-family: 'Pixel Operator';
   font-style: normal;
   font-weight: 300;
   font-size: 0.93rem; /* Base para mobile */
@@ -491,7 +491,22 @@ span.sr-only {
     background-size: 60%;
     padding: 40px 0px 0px 0px;
   }
+  h1.titulo {
+    font-family: 'MS PGothic';
+  }
 
+/*texto subtítulo*/
+  h2.subtitulo {
+    font-family: 'MS PGothic';
+  }
+
+  p.paragrafo {
+    font-family: 'MS PGothic';
+  }
+
+  p.quote{
+    font-family: 'MS PGothic';
+  }
 }
 
 /* Media Query para Notebook (1240px ou mais) */
@@ -511,12 +526,23 @@ span.sr-only {
     height: 80%;
   }
 
+  h1.titulo {
+    font-family: 'MS PGothic';
+  }
+
+/*texto subtítulo*/
+  h2.subtitulo {
+    font-family: 'MS PGothic';
+  }
+
   p.paragrafo {
     font-size: 0.800rem;
+    font-family: 'MS PGothic';
   }
 
   p.quote{
     font-size: 0.75rem;
+    font-family: 'MS PGothic';
   }
 }
 
@@ -530,6 +556,27 @@ span.sr-only {
   #posts_divider {
     background-size: 150%;
   }
+
+  h1.titulo {
+    font-size: 1.40rem;
+    font-family: 'MS PGothic';
+  }
+
+/*texto subtítulo*/
+  h2.subtitulo {
+    font-size: 1.40rem;
+    letter-spacing:2px;
+    font-family: 'MS PGothic';
+  }
+  p.paragrafo {
+    font-size: 0.900rem;
+    font-family: 'MS PGothic';
+  }
+
+  p.quote{
+    font-size: 0.80rem;
+    font-family: 'MS PGothic';
+  }  
 }
 
 /* Media Query para Monitores grandes (1920px ou mais) */
@@ -546,19 +593,23 @@ span.sr-only {
     /*texto título*/
   h1.titulo {
     font-size: 1.40rem;
+    font-family: 'MS PGothic';
   }
 
 /*texto subtítulo*/
   h2.subtitulo {
     font-size: 1.40rem;
     letter-spacing:2px;
+    font-family: 'MS PGothic';
   }
   p.paragrafo {
     font-size: 0.900rem;
+    font-family: 'MS PGothic';
   }
 
   p.quote{
     font-size: 0.80rem;
+    font-family: 'MS PGothic';
   }
 
 }
