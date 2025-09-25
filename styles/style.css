@@ -181,7 +181,7 @@ h1.titulo {
   font-family: 'Pixel Operator';
   font-style: normal;
   font-weight: 300;
-  font-size: 0.93rem; /* Base para mobile */
+  font-size: 1.93rem; /* Base para mobile */
   letter-spacing:-1px;
   color:#000;
   text-align: center;
@@ -195,10 +195,10 @@ h1.titulo {
 h2.subtitulo {
   margin:0 0 0px 0;
   padding:0;
-  font-family: 'MS PGothic';
+  font-family: 'Pixel Operator';
   font-style: normal;
   font-weight: 300;
-  font-size: 0.93rem; /* Base para mobile */
+  font-size: 1.89rem; /* Base para mobile */
   letter-spacing:1px;
   color: #000;
   text-align: center;
@@ -209,10 +209,10 @@ h2.subtitulo {
 p.quote{
   margin:10px 0 15px 0;
   padding: 0px;
-  font-family: 'MS PGothic';
+  font-family: 'Pixel Operator';
   font-style: normal;
   font-weight: 300;
-  font-size: 0.688rem; /* Base para mobile */
+  font-size: 0.875rem; /* Base para mobile */
   text-align: center;
   color:#000;
 }
@@ -221,10 +221,10 @@ p.quote{
 p.paragrafo{
    margin:0 0 10px 0;
    padding:0;
-   font-family: 'MS PGothic';
+   font-family: 'Pixel Operator';
    font-style: normal;
    font-weight: 300;
-   font-size: 0.875rem;
+   font-size: 0.900rem;
    letter-spacing:1.5px;
    text-align: justify;
    color:#000;
