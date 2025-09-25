@@ -93,7 +93,6 @@ body{
   background-image: url('../assets/imgs/background.jpg');
   background-size:cover;
   background-attachment:fixed;
-  font-family: 'MS PGothic', sans-serif;
   font-style: normal;
   font-weight: 300;
   color: #000;
@@ -241,12 +240,12 @@ div.title_bar{
 
 /*texto do título da página do lado do icon*/
 div.title_bar_text{
-  font-family: 'MS PGothic';
+  font-family: 'Pixel Operator';
   font-style: normal;
   font-weight: 300;
   color:#4f4f4f;
   letter-spacing:3px;
-  font-size:11px;
+  font-size:0.99rem;
   margin: 1px 0px 2px 0px;
 }
 
@@ -270,8 +269,8 @@ nav.main_menu > ul > li {
 nav.main_menu > ul > li > a {
   display: block;
   padding: 6px 10px;
-  font-size: 0.75rem;
-  font-family: 'MS PGothic', sans-serif;
+  font-size: 0.88rem;
+  font-family: 'Pixel Operator', sans-serif;
   color: var(--preto);
   text-decoration: none;
   text-transform: lowercase;
@@ -332,8 +331,8 @@ ul.submenu li a {
   color: var(--preto); 
   text-decoration: none; 
   padding: 6px 10px 6px 35px;
-  font-family: 'MS PGothic', sans-serif;
-  font-size: 0.75rem;
+  font-family: 'Pixel Operator', sans-serif;
+  font-size: 0.88rem;
   text-transform: lowercase;
 }
    
@@ -374,10 +373,10 @@ div.alert_img:hover{
 /*coming soon*/
 p.alert_titulo {
   padding: 0px 0px 0px 0px;
-  font-family: 'MS PGothic';
+  font-family: 'Pixel Operator';
   font-style: normal;
   font-weight: 300;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   text-align: center;
   color: #000;
   text-transform: uppercase;
@@ -491,13 +490,36 @@ span.sr-only {
     background-size: 60%;
     padding: 40px 0px 0px 0px;
   }
+  div.title_bar_text{
+    font-family: 'MS PGothic';
+  font-size:11px;
+  }
+  
+  nav.main_menu > ul > li > a {
+    font-size: 0.75rem;
+    font-family: 'MS PGothic', sans-serif;
+  }
+  
+  ul.submenu li a {
+    font-family: 'MS PGothic', sans-serif;
+    font-size: 0.75rem;
+  }
+  
+  p.alert_titulo {
+    font-family: 'MS PGothic';
+    font-size: 0.75rem;
+  
+  }
+
   h1.titulo {
     font-family: 'MS PGothic';
+    font-size: 1.40rem;
   }
 
 /*texto subtítulo*/
   h2.subtitulo {
     font-family: 'MS PGothic';
+    font-size: 1.40rem;
   }
 
   p.paragrafo {
@@ -524,6 +546,27 @@ span.sr-only {
 
   div.window_body {
     height: 80%;
+  }
+
+  div.title_bar_text{
+    font-family: 'MS PGothic';
+  font-size:11px;
+  }
+  
+  nav.main_menu > ul > li > a {
+    font-size: 0.75rem;
+    font-family: 'MS PGothic', sans-serif;
+  }
+  
+  ul.submenu li a {
+    font-family: 'MS PGothic', sans-serif;
+    font-size: 0.75rem;
+  }
+  
+  p.alert_titulo {
+    font-family: 'MS PGothic';
+    font-size: 0.75rem;
+  
   }
 
   h1.titulo {
@@ -557,6 +600,27 @@ span.sr-only {
     background-size: 150%;
   }
 
+  div.title_bar_text{
+    font-family: 'MS PGothic';
+  font-size:11px;
+  }
+  
+  nav.main_menu > ul > li > a {
+    font-size: 0.75rem;
+    font-family: 'MS PGothic', sans-serif;
+  }
+  
+  ul.submenu li a {
+    font-family: 'MS PGothic', sans-serif;
+    font-size: 0.75rem;
+  }
+  
+  p.alert_titulo {
+    font-family: 'MS PGothic';
+    font-size: 0.75rem;
+  
+  }
+
   h1.titulo {
     font-size: 1.40rem;
     font-family: 'MS PGothic';
@@ -588,6 +652,27 @@ span.sr-only {
 
   #posts_divider {
     background-size: 130%;
+  }
+
+  div.title_bar_text{
+    font-family: 'MS PGothic';
+  font-size:11px;
+  }
+  
+  nav.main_menu > ul > li > a {
+    font-size: 0.75rem;
+    font-family: 'MS PGothic', sans-serif;
+  }
+  
+  ul.submenu li a {
+    font-family: 'MS PGothic', sans-serif;
+    font-size: 0.75rem;
+  }
+  
+  p.alert_titulo {
+    font-family: 'MS PGothic';
+    font-size: 0.75rem;
+  
   }
 
     /*texto título*/
