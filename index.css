@@ -94,11 +94,9 @@ div.wing2 {
     background-image: url(./assets/icons/wing2.gif);
 }
 
-/*
-* Media Queries para telas maiores
-*/
+/*media queries para responsividade de telas*/
 
-/* Para telas a partir de 768px (tablets) */
+/* para tablets (768px ou mais) */
 @media (min-width: 768px) {
 
     nav.main_menu > ul {
@@ -116,11 +114,7 @@ div.wing2 {
     }
 
     div.redes_sociais {
-        gap: 35px; /* Aumenta o gap para notebooks */
-    }
-
-    div.redes_sociais {
-        gap: 45px; /* Aumenta o gap para tablets */
+        gap: 35px;
     }
 
     div.wing1, div.wing2 {
@@ -128,8 +122,9 @@ div.wing2 {
 
 }
 
-/* Para telas a partir de 1240px (notebooks) */
+/* para notebook (1240px ou mais) */
 @media (min-width: 1240px) {
+
     main.apresentacao {
         flex-direction: row;
         align-items: center;
@@ -146,12 +141,5 @@ div.wing2 {
 
     div.wing1, div.wing2 {
         display: flex;
-
-    /*div.wing1, div.wing2 {
-        width: 34px;
-        height: 29px;
-        background-size: contain;
-        display: flex;
-    }*/
 
 }

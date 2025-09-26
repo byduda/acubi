@@ -444,8 +444,8 @@ div.divider_dotted {
 footer .cat {
   background-image: url(../assets/icons/cat.gif);
   background-size: cover;
-  width: 60px; /* Base para mobile */
-  height: 60px; /* Base para mobile */
+  width: 80px; /* Base para mobile */
+  height: 80px; /* Base para mobile */
   position: fixed;
   left: 50%;
   bottom: 0;
@@ -476,11 +476,9 @@ span.sr-only {
 }
 
 
-/*
-* Media Queries para telas maiores
-*/
+/*media queries para responsividade de telas*/
 
-/* Para telas a partir de 768px (tablets) */
+/* para tablets (768px ou mais) */
 @media (min-width: 768px) {
   #posts_divider {
     background-size: 120%;
@@ -516,7 +514,6 @@ span.sr-only {
     font-size: 1.40rem;
   }
 
-/*texto subtítulo*/
   h2.subtitulo {
     font-family: 'MS PGothic';
     font-size: 1.40rem;
@@ -531,7 +528,7 @@ span.sr-only {
   }
 }
 
-/* Media Query para Notebook (1240px ou mais) */
+/* para notebook (1240px ou mais) */
 @media (min-width: 1240px) {
 
   nav.main_menu > ul {
@@ -573,7 +570,6 @@ span.sr-only {
     font-family: 'MS PGothic';
   }
 
-/*texto subtítulo*/
   h2.subtitulo {
     font-family: 'MS PGothic';
   }
@@ -589,7 +585,7 @@ span.sr-only {
   }
 }
 
-/* Media Query para Monitores grandes (1440px ou mais) */
+/* para monitores médios (1440px ou mais) */
 @media (min-width: 1440px) {
   #container {
     width: 35%;
@@ -643,7 +639,7 @@ span.sr-only {
   }  
 }
 
-/* Media Query para Monitores grandes (1920px ou mais) */
+/* para monitores grandes (1920px ou mais) */
 @media (min-width: 1920px) {
   #container {
     width: 30%;
@@ -675,13 +671,11 @@ span.sr-only {
   
   }
 
-    /*texto título*/
   h1.titulo {
     font-size: 1.40rem;
     font-family: 'MS PGothic';
   }
 
-/*texto subtítulo*/
   h2.subtitulo {
     font-size: 1.40rem;
     letter-spacing:2px;
