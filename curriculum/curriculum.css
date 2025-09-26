@@ -46,32 +46,32 @@ p.timeline_data{
 
 /*timeline OTO-ONER*/
 .timeline_item:nth-child(3) .timeline_divider {
-    height: 170px;
+    height: 160px;
 }
 
 /*timeline ONER-ALFRED*/
 .timeline_item:nth-child(4) .timeline_divider {
-    height: 130px;
+    height: 120px;
 }
 
 /*timeline ALFRED-ETUS*/
 .timeline_item:nth-child(5) .timeline_divider {
-    height: 150px;
+    height: 140px;
 }
 
 /*timeline ETUS-BRASIL CENTER*/
 .timeline_item:nth-child(6) .timeline_divider {
-    height: 185px;
+    height: 165px;
 }
 
 /*timeline BRASIL CENTER-COPERCANA*/
 .timeline_item:nth-child(7) .timeline_divider {
-    height: 150px;
+    height: 140px;
 }
 
 /*timeline COPERCANA-NEXUS*/
 .timeline_item:nth-child(8) .timeline_divider {
-    height: 120px;
+    height: 100px;
 }
 
 /*coluna das experiencias*/
