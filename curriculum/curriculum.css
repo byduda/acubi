@@ -71,7 +71,7 @@ p.timeline_data{
 
 /*timeline COPERCANA-NEXUS*/
 .timeline_item:nth-child(8) .timeline_divider {
-    height: 100px;
+    height: 110px;
 }
 
 /*coluna das experiencias*/
@@ -123,7 +123,7 @@ a.download_icon {
     background-size: contain;
     transition: filter 0.20s, transform 0.20s;
     background-image: url(../assets/icons/download.svg);
-    margin: 10px 0;
+    margin: 10px 0px 0px 10px;
     display: flex;
 
 }
