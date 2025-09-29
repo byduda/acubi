@@ -142,7 +142,7 @@ a.download_icon:hover {
         margin: 40px 10px 0px -20px;
     }
 
-    /*timeline TOTVS-AMAZON*/
+/*timeline TOTVS-AMAZON*/
 .timeline_item:first-child .timeline_divider {
     height: 37px;
 }
@@ -202,6 +202,46 @@ ul.funcoes li{
 /* para notebook (1240px ou mais) */
 @media (min-width: 1240px) {
 
+/*timeline TOTVS-AMAZON*/
+.timeline_item:first-child .timeline_divider {
+    height: 61px;
+}
+
+    /*timeline AMAZON-OTO*/
+.timeline_item:nth-child(2) .timeline_divider {
+    height: 75px;
+}
+
+/*timeline OTO-ONER*/
+.timeline_item:nth-child(3) .timeline_divider {
+    height: 58px;
+}
+
+/*timeline ONER-ALFRED*/
+.timeline_item:nth-child(4) .timeline_divider {
+    height: 45px;
+}
+
+/*timeline ALFRED-ETUS*/
+.timeline_item:nth-child(5) .timeline_divider {
+    height: 65px;
+}
+
+/*timeline ETUS-BRASIL CENTER*/
+.timeline_item:nth-child(6) .timeline_divider {
+    height: 70px;
+}
+
+/*timeline BRASIL CENTER-COPERCANA*/
+.timeline_item:nth-child(7) .timeline_divider {
+    height: 60px;
+}
+
+/*timeline COPERCANA-NEXUS*/
+.timeline_item:nth-child(8) .timeline_divider {
+    height: 46px;
+}
+
 }
 
 /* para monitores médios (1440px ou mais) */
@@ -212,7 +252,7 @@ ul.funcoes li{
 /* para monitores grandes (1920px ou mais) */
 @media (min-width: 1920px) {
 
-    /*timeline AMAZON-OTO*/
+/*timeline AMAZON-OTO*/
 .timeline_item:nth-child(2) .timeline_divider {
     height: 65px;
 }
