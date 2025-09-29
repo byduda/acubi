@@ -537,8 +537,7 @@ span.sr-only {
 
   #container {
     width: 40%;
-    top: 50%;
-    height: auto;
+    height: 90%;
   }
 
   div.window_body {
@@ -568,10 +567,12 @@ span.sr-only {
 
   h1.titulo {
     font-family: 'MS PGothic';
+    font-size: 0.93rem;
   }
 
   h2.subtitulo {
     font-family: 'MS PGothic';
+    font-size: 0.93rem;
   }
 
   p.paragrafo {
