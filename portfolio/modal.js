@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalImg = document.getElementById('modal-img');
     const modalDescription = document.getElementById('modal-description');
     const closeModalBtn = document.getElementById('modal-close-btn');
+    
+    // NOVO: Seleciona todos os botões e links de ação dentro dos templates
+    const actionButtons = document.querySelectorAll('.template .botoes, .template a.botoes');
 
     // função para abrir o modal
     function openModal(item) {
@@ -32,14 +35,32 @@ document.addEventListener('DOMContentLoaded', () => {
         modalOverlay.style.display = 'none';
     }
 
+    // ADIÇÃO CRÍTICA: Impedir que cliques nos botões abram o modal
+    actionButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            // ESSENCIAL: Impede que o clique suba para o elemento .template pai
+            event.stopPropagation();
+            // Para o caso do link de Preview, permite que ele siga para o link
+            // Para o caso do botão 'Coven', o clique é anulado e nada acontece
+        });
+    });
+
     // adiciona o evento de clique para cada item do template
     gridItems.forEach(item => {
-        item.addEventListener('click', () => {
+        // Adiciona o evento de clique APENAS na FIGURA para simular o "zoom-in"
+        // O evento de clique principal deve ser movido da div.template (o item inteiro) para a figura!
+        const figure = item.querySelector('figure');
+
+        // Note que o evento agora está no `figure`
+        figure.addEventListener('click', () => {
             openModal(item);
         });
         // adiciona um cursor de ponteiro para indicar que é clicável
-        item.style.cursor = 'pointer'; 
+        figure.style.cursor = 'pointer'; 
     });
+
+    // Removendo o cursor dos itens gerais, pois o clique está na figure
+    // Opcional: Se quiser manter o cursor no item todo, mantenha o `item.style.cursor = 'pointer';`
 
     // adiciona o evento de clique para o botão de fechar
     closeModalBtn.addEventListener('click', closeModal);

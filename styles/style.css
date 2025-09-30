@@ -65,8 +65,15 @@
                              rgba(0,0,0,.0509804) 43%,
                              rgba(0,0,0,.1) 48%,
                              rgba(0,0,0,.0509804));
+
+  --botao: linear-gradient(#ffffff 20%,
+                             #ffffff 25%,
+                             #00000011 43%,
+                             #00000015 48%,
+                             #00000007);                            
   --preto: #000;
   --branco: #fff;
+
 }
 
 /*estrelinhas do cursor*/
@@ -295,8 +302,8 @@ ul.submenu {
   z-index: 99;
   border: 1px solid #a1a1a1;
   box-shadow: 4px 4px 3px -2px rgba(0,0,0,0.3);
-  min-width: 150px;
   background: var(--branco);
+  min-width: 150px;
   padding: 2px; 
 }
 
@@ -438,6 +445,70 @@ div.divider_dotted {
   background-size:100% auto,cover;
   border:1.5px solid #888;
   border-radius:3px;
+}
+
+/*botao*/
+/* style.css - Alteração necessária para incluir o <a> */
+button, a.botoes { /* Aplica o estilo de base que estava em 'button' */
+  background: var(--submenu);
+  border: 1px solid #848484;
+  border-radius: 3px;
+  box-shadow: var(--submenu);
+  box-sizing: border-box;
+  color: #222;
+  min-height: 28px;
+  min-width: 75px;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  font-family: 'Pixel Operator';
+  font-size: 0.850rem;
+  letter-spacing: 2px;
+  filter: grayscale(100%) drop-shadow(0px 4px 4px rgba(114, 114, 114, 0.25));
+  text-decoration: none; 
+}
+
+/* Os pseudoelementos para hover/active */
+button:after, 
+button:before,
+a.botoes:after,
+a.botoes:before {
+  content: "";
+  height: 100%;
+  left: 0;
+  margin: 0;
+  opacity: 0; 
+  padding: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity .3s;
+  width: 100%;
+  z-index: -1;
+  background: var(--botao);    
+}
+
+/* Hover e Active */
+button:not(:disabled):hover,
+a.botoes:hover {
+  border-color: #797979; 
+  transition: border-color .3s;
+}
+
+button:not(:disabled):hover:before,
+a.botoes:hover:before {
+  opacity: 1; 
+  transition: opacity .3s;
+}
+
+button:not(:disabled):active,
+a.botoes:active {
+  border-color: var(-); /* Use a variável correta, se houver */
+  transition: border-color .3s;
+}
+button:not(:disabled):active:after,
+a.botoes:active:after {
+  opacity: 1; 
+  transition: opacity .3s;
 }
 
 /*gatinho do rodapé*/

@@ -1,46 +1,70 @@
  /*templates/pixelart*/
 
-main.colunas {
-    display: flex; 
-    gap: 0px;
-    margin: 25px 0px 0px 0px;
+ main.colunas {
+    display: flex;         /* ESSENCIAL: Coloca os filhos lado a lado */
+    margin: 20px 0px 0px 0px;
     gap: 10px;
+    justify-content: center;
+    padding: 0px 10px 10px 10px;
+    flex-wrap: wrap;       /* ESSENCIAL: Permite quebrar a linha para o 2x2 */
 }
 
-div.template{
+div.template {
     display: block;
-    padding: 0;
-    width: 280px;
+    padding: 0px 0px 10px 0px; /* Garante que não há padding atrapalhando */
+    width: calc(50% - 5px); 
     text-shadow: none;
-    border-radius: 10px;
-    background-image: none !important;
-    border: 1px solid #292929;
-    box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 6px 6px; 
+    border: none; 
     transition: none;
+    box-sizing: border-box;    
+    background-color: transparent; /* Removemos o fundo do pai para dar transparência ao corpo */
 }
-  
+
+div.template-title-bar {
+    background: var(--barrademenu);
+    display: flex;
+    justify-content: center;
+    padding: 3px 8px;
+    
+    /* AQUI: Adiciona a borda superior e lateral, com arredondamento no topo */
+    border: 1px solid #292929;
+    border-bottom: 1px dotted #000000; /* Linha de separação */
+    border-radius: 6px 6px 0 0; 
+}
+
+div.template-title-bar h6 {
+    /* Estilo para o texto dentro da barra */
+    font-family: 'Pixel Operator', sans-serif; /* Use uma das suas fontes pixeladas */
+    font-style: normal;
+    font-weight: 300;
+    color: #4f4f4f; /* Cor do texto em title_bar_text */
+    letter-spacing: 1px;
+    font-size: 0.85rem; /* Ajuste o tamanho da fonte */
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
 div.template figure {
     position: relative;
     overflow: hidden;
-    width: 100%;
-    height: 168px;
-    border-radius: 10px 10px 0px 0px;
-    border-bottom: 1px dotted #000000;
+    border-left: 1px solid #292929;
+    border-right: 1px solid #292929;
+    border-bottom: 1px dotted #292929; /* Essa é a linha final sólida que você quer */
     transition: border 0.3s ease 0.1s;
+    border-radius: 0px 0px 6px 6px;
 }
+
   
 div.template:hover figure {
-    border-color: transparent;
     transition-delay: 0;
 }
   
 div.template figure:before {
     content: '';
     position: absolute;
-    z-index: 9;
     opacity: 0;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-color: #ffffff83;
@@ -62,12 +86,13 @@ div.template figure:before {
     transition: 0.3s ease;
     z-index: 10;
   }
-  
-  div.template:hover figure:before,
-  div.template:hover figure:after {
-    opacity: 1;
-    transition-delay: 0;
-  }
+
+/* Isso garante que o overlay e o ícone de zoom-in apareçam APENAS quando o mouse estiver sobre a figura (a imagem) */
+div.template figure:hover:before,
+div.template figure:hover:after {
+  opacity: 1;
+  transition-delay: 0;
+}
   
   div.template figure img {
     display: block;
@@ -76,27 +101,25 @@ div.template figure:before {
     object-fit: cover;
   }
   
-  .template_titulo {
+  div.template_botoes {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px 24px;
-    color: rgb(var(--bodyTextColor));
-  }
-  
-  .template_titulo h6 {
-    margin: 0 auto 0 0;
-    font-size: 13px;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 5px 0px 0px 0px; 
+    gap: 5px;
+    border-radius: 0 0 6px 6px; 
+    }
 
-}
-  
-  .template_titulo i.fx,
-  .template_titulo span {
-    margin-left: 12px;
-  }
-
-  .template_titulo span {
-    font-size: 13px;
+.botoes {
+    font-size: 0.850rem;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.40s;
+    display: block; 
+    text-decoration: none; 
+    padding: 5px 10px; 
 
 }
 
@@ -167,7 +190,10 @@ div.template figure:before {
     width: 50px;
     height: 22px;
     cursor: pointer;
-    margin: -6px 0px 0px 595px;
+    position: absolute; /* Posição absoluta em relação ao .title_bar ou .window */
+    top: 1.6%; /* Centraliza verticalmente (ajuste se necessário) */
+    right: 8px; /* Afasta da borda direita da barra de título */
+    transform: translateY(-50%); /* Ajuste fino vertical */
     box-shadow: 1px 1px 0px #fff;
     background: url(../assets/icons/close_button.png) no-repeat 50%, var(--w7-wct-bg), var(--w7-wct_close-bg);
     box-shadow: var(--w7-wct-sd);
@@ -200,4 +226,27 @@ div.template figure:before {
     --w7-wct-bg-h: radial-gradient(circle at bottom, #2aceda, transparent 65%), linear-gradient(#b6d9ee 50%, #1a6ca1 0);
     --w7-wct-bg-a: radial-gradient(circle at bottom, #0bfdfa, transparent 65%), linear-gradient(#86a7bc 50%, #092747 0);
     --w7-wct_close-bg: radial-gradient(circle at -60% 50%, #0007 5% 10%, #0000 50%), radial-gradient(circle at 160% 50%, #0007 5% 10%, #0000 50%), linear-gradient(#e0a197e5, #cf796a 25% 50%, #d54f36 50%);
+}
+
+/*media queries para responsividade de telas*/
+
+/* para tablets (768px ou mais) */
+@media (min-width: 768px) {
+    div.template_botoes {
+        flex-direction: row; /* Altera o fluxo para vertical */
+
+}
+
+/* para notebook (1240px ou mais) */
+@media (min-width: 1240px) {
+}
+
+/* para monitores médios (1440px ou mais) */
+@media (min-width: 1440px) {
+
+}
+
+/* para monitores grandes (1920px ou mais) */
+@media (min-width: 1920px) {
+    
 }

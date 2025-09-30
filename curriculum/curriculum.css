@@ -41,32 +41,32 @@ p.timeline_data{
 
 /*timeline AMAZON-OTO*/
 .timeline_item:nth-child(2) .timeline_divider {
-    height: 200px;
+    height: 201px;
 }
 
 /*timeline OTO-ONER*/
 .timeline_item:nth-child(3) .timeline_divider {
-    height: 160px;
+    height: 162px;
 }
 
 /*timeline ONER-ALFRED*/
 .timeline_item:nth-child(4) .timeline_divider {
-    height: 120px;
+    height: 122px;
 }
 
 /*timeline ALFRED-ETUS*/
 .timeline_item:nth-child(5) .timeline_divider {
-    height: 140px;
+    height: 142px;
 }
 
 /*timeline ETUS-BRASIL CENTER*/
 .timeline_item:nth-child(6) .timeline_divider {
-    height: 165px;
+    height: 163px;
 }
 
 /*timeline BRASIL CENTER-COPERCANA*/
 .timeline_item:nth-child(7) .timeline_divider {
-    height: 140px;
+    height: 138px;
 }
 
 /*timeline COPERCANA-NEXUS*/
