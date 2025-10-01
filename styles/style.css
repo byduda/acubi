@@ -73,7 +73,6 @@
                              #00000007);                            
   --preto: #000;
   --branco: #fff;
-
 }
 
 /*estrelinhas do cursor*/
@@ -211,6 +210,17 @@ h2.subtitulo {
   text-transform: uppercase;
 }
 
+h3 {
+    font-family: 'Pixel Operator', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #4f4f4f;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
 /*texto quote*/
 p.quote{
   margin:10px 0 15px 0;
@@ -253,7 +263,7 @@ div.title_bar_text{
   color:#4f4f4f;
   letter-spacing:3px;
   font-size:0.99rem;
-  margin: 1px 0px 2px 0px;
+  margin: 3px 0px 3px 0px;
 }
 
  /*barra de menu*/
@@ -546,11 +556,11 @@ span.sr-only {
   border-width: 0;
 }
 
-
 /*media queries para responsividade de telas*/
 
 /* para tablets (768px ou mais) */
 @media (min-width: 768px) {
+
   #posts_divider {
     background-size: 120%;
   }
@@ -577,7 +587,6 @@ span.sr-only {
   p.alert_titulo {
     font-family: 'MS PGothic';
     font-size: 0.75rem;
-  
   }
 
   h1.titulo {
@@ -611,29 +620,13 @@ span.sr-only {
     height: 90%;
   }
 
-  div.window_body {
-    height: 80%;
-  }
-
-  div.title_bar_text{
-    font-family: 'MS PGothic';
-  font-size:11px;
-  }
-  
-  nav.main_menu > ul > li > a {
-    font-size: 0.75rem;
-    font-family: 'MS PGothic', sans-serif;
-  }
-  
-  ul.submenu li a {
-    font-family: 'MS PGothic', sans-serif;
-    font-size: 0.75rem;
+  #posts_divider {
+    background-size: 150%;
   }
   
   p.alert_titulo {
     font-family: 'MS PGothic';
     font-size: 0.75rem;
-  
   }
 
   h1.titulo {
@@ -660,12 +653,12 @@ span.sr-only {
 /* para monitores médios (1440px ou mais) */
 @media (min-width: 1440px) {
   #container {
-    width: 35%;
-    height: auto;
+    width: 37%;
+    height: 90%;
   }
 
   #posts_divider {
-    background-size: 150%;
+    background-size: 130%;
   }
 
   div.title_bar_text{
@@ -686,7 +679,6 @@ span.sr-only {
   p.alert_titulo {
     font-family: 'MS PGothic';
     font-size: 0.75rem;
-  
   }
 
   h1.titulo {

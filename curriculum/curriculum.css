@@ -103,7 +103,7 @@ p.cargos{
 }
 
 
-/* formatação do texto aos itens da lista (li) */
+/*formatação do texto aos itens da lista (li)*/
 ul.funcoes li {
     font-family: 'Pixel Operator';
     font-style: normal;
@@ -113,7 +113,6 @@ ul.funcoes li {
     text-align: justify;
     list-style-type: none;
     margin: -5px 0px 10px 15px;
-    
 }
 
 a.download_icon {
@@ -125,7 +124,6 @@ a.download_icon {
     background-image: url(../assets/icons/download.svg);
     margin: 10px 0px 0px 10px;
     display: flex;
-
 }
 
 a.download_icon:hover {
@@ -138,153 +136,197 @@ a.download_icon:hover {
 /* para tablets (768px ou mais) */
 @media (min-width: 768px) {
 
+    /*coluna da timeline no tablet*/
     section.timeline {
         margin: 40px 10px 0px -20px;
     }
 
-/*timeline TOTVS-AMAZON*/
-.timeline_item:first-child .timeline_divider {
-    height: 37px;
-}
+    /*timeline TOTVS-AMAZON no tablet*/
+    .timeline_item:first-child .timeline_divider {
+        height: 37px;
+    }
 
-/*timeline AMAZON-OTO*/
-.timeline_item:nth-child(2) .timeline_divider {
-    height: 55px;
-}
+    /*timeline AMAZON-OTO no tablet*/
+    .timeline_item:nth-child(2) .timeline_divider {
+        height: 55px;
+    }
 
-/*timeline OTO-ONER*/
-.timeline_item:nth-child(3) .timeline_divider {
-    height: 55px;
-}
+    /*timeline OTO-ONER no tablet*/
+    .timeline_item:nth-child(3) .timeline_divider {
+        height: 55px;
+    }
 
-/*timeline ONER-ALFRED*/
-.timeline_item:nth-child(4) .timeline_divider {
-    height: 50px;
-}
+    /*timeline ONER-ALFRED no tablet*/
+    .timeline_item:nth-child(4) .timeline_divider {
+        height: 50px;
+    }
 
-/*timeline ALFRED-ETUS*/
-.timeline_item:nth-child(5) .timeline_divider {
-    height: 55px;
-}
+    /*timeline ALFRED-ETUS no tablet*/
+    .timeline_item:nth-child(5) .timeline_divider {
+        height: 55px;
+    }
 
-/*timeline ETUS-BRASIL CENTER*/
-.timeline_item:nth-child(6) .timeline_divider {
-    height: 80px;
-}
+    /*timeline ETUS-BRASIL CENTER no tablet*/
+    .timeline_item:nth-child(6) .timeline_divider {
+        height: 80px;
+    }
 
-/*timeline BRASIL CENTER-COPERCANA*/
-.timeline_item:nth-child(7) .timeline_divider {
-    height: 55px;
-}
+    /*timeline BRASIL CENTER-COPERCANA no tablet*/
+    .timeline_item:nth-child(7) .timeline_divider {
+        height: 55px;
+    }
 
-/*timeline COPERCANA-NEXUS*/
-.timeline_item:nth-child(8) .timeline_divider {
-    height: 35px;
-}
+    /*timeline COPERCANA-NEXUS no tablet*/
+    .timeline_item:nth-child(8) .timeline_divider {
+        height: 35px;
+    }
+    /*data da timeline no tablet*/
+    p.timeline_data{
+        font-size: 0.750rem;
+        font-family: 'MS PGothic';
+    }
 
-p.timeline_data{
-    font-size: 0.750rem;
-    font-family: 'MS PGothic';
-}
+    /*texto cargos no tablet*/
+    p.cargos{
+        font-size: 0.750rem;
+        font-family: 'MS PGothic';
+        letter-spacing: 1.1px;
+    }
 
-p.cargos{
-    font-size: 0.750rem;
-    font-family: 'MS PGothic';
-}
-
-ul.funcoes li{
-    font-size: 0.750rem;
-    font-family: 'MS PGothic';
-}
+    /*formatação do texto aos itens da lista (li) no tablet*/
+    ul.funcoes li{
+        font-size: 0.750rem;
+        font-family: 'MS PGothic';
+    }
 
 }
 
 /* para notebook (1240px ou mais) */
 @media (min-width: 1240px) {
 
-/*timeline TOTVS-AMAZON*/
-.timeline_item:first-child .timeline_divider {
-    height: 50px;
-}
+    /*timeline TOTVS-AMAZON no notebook*/
+    .timeline_item:first-child .timeline_divider {
+        height: 60px;
+    }
 
-    /*timeline AMAZON-OTO*/
-.timeline_item:nth-child(2) .timeline_divider {
-    height: 75px;
-}
+    /*timeline AMAZON-OTO no notebook*/
+    .timeline_item:nth-child(2) .timeline_divider {
+        height: 75px;
+    }
 
-/*timeline OTO-ONER*/
-.timeline_item:nth-child(3) .timeline_divider {
-    height: 55px;
-}
+    /*timeline OTO-ONER no notebook*/
+    .timeline_item:nth-child(3) .timeline_divider {
+        height: 70px;
+    }
 
-/*timeline ONER-ALFRED*/
-.timeline_item:nth-child(4) .timeline_divider {
-    height: 48px;
-}
+    /*timeline ONER-ALFRED no notebook*/
+    .timeline_item:nth-child(4) .timeline_divider {
+        height: 48px;
+    }
 
-/*timeline ALFRED-ETUS*/
-.timeline_item:nth-child(5) .timeline_divider {
-    height: 65px;
-}
+    /*timeline ALFRED-ETUS no notebook*/
+    .timeline_item:nth-child(5) .timeline_divider {
+        height: 59px;
+    }
 
-/*timeline ETUS-BRASIL CENTER*/
-.timeline_item:nth-child(6) .timeline_divider {
-    height: 70px;
-}
+    /*timeline ETUS-BRASIL CENTER no notebook*/
+    .timeline_item:nth-child(6) .timeline_divider {
+        height: 73px;
+    }
 
-/*timeline BRASIL CENTER-COPERCANA*/
-.timeline_item:nth-child(7) .timeline_divider {
-    height: 60px;
-}
+    /*timeline BRASIL CENTER-COPERCANA no notebook*/
+    .timeline_item:nth-child(7) .timeline_divider {
+        height: 60px;
+    }
 
-/*timeline COPERCANA-NEXUS*/
-.timeline_item:nth-child(8) .timeline_divider {
-    height: 46px;
-}
+    /*timeline COPERCANA-NEXUS no notebook*/
+    .timeline_item:nth-child(8) .timeline_divider {
+        height: 60px;
+    }
 
 }
 
 /* para monitores médios (1440px ou mais) */
 @media (min-width: 1440px) {
 
+    /*timeline TOTVS-AMAZON no monitor médio*/
+    .timeline_item:first-child .timeline_divider {
+        height: 58px;
+    }
+
+    /*timeline AMAZON-OTO no monitor médio*/
+    .timeline_item:nth-child(2) .timeline_divider {
+        height: 70px;
+    }
+
+    /*timeline OTO-ONER no monitor médio*/
+    .timeline_item:nth-child(3) .timeline_divider {
+        height: 86px;
+    }
+
+    /*timeline ONER-ALFRED no monitor médio*/
+    .timeline_item:nth-child(4) .timeline_divider {
+        height: 54px;
+    }
+
+    /*timeline ALFRED-ETUS no monitor médio*/
+    .timeline_item:nth-child(5) .timeline_divider {
+        height: 70px;
+    }
+
+    /*timeline ETUS-BRASIL CENTER no monitor médio*/
+    .timeline_item:nth-child(6) .timeline_divider {
+        height: 74px;
+    }
+
+    /*timeline BRASIL CENTER-COPERCANA no monitor médio*/
+    .timeline_item:nth-child(7) .timeline_divider {
+        height: 82px;
+    }
+
+    /*timeline COPERCANA-NEXUS no monitor médio*/
+    .timeline_item:nth-child(8) .timeline_divider {
+        height: 58px;
+    }
+
 }
 
 /* para monitores grandes (1920px ou mais) */
 @media (min-width: 1920px) {
 
-/*timeline AMAZON-OTO*/
-.timeline_item:nth-child(2) .timeline_divider {
-    height: 65px;
-}
+/*timeline AMAZON-OTO no monitor grande*/
+    .timeline_item:nth-child(2) .timeline_divider {
+        height: 65px;
+    }
 
-/*timeline OTO-ONER*/
-.timeline_item:nth-child(3) .timeline_divider {
-    height: 60px;
-}
+    /*timeline OTO-ONER no monitor grande*/
+    .timeline_item:nth-child(3) .timeline_divider {
+        height: 60px;
+    }
 
-/*timeline ONER-ALFRED*/
-.timeline_item:nth-child(4) .timeline_divider {
-    height: 55px;
-}
+    /*timeline ONER-ALFRED no monitor grande*/
+    .timeline_item:nth-child(4) .timeline_divider {
+        height: 55px;
+    }
 
-/*timeline ALFRED-ETUS*/
-.timeline_item:nth-child(5) .timeline_divider {
-    height: 65px;
-}
+    /*timeline ALFRED-ETUS no monitor grande*/
+    .timeline_item:nth-child(5) .timeline_divider {
+        height: 65px;
+    }
 
-/*timeline ETUS-BRASIL CENTER*/
-.timeline_item:nth-child(6) .timeline_divider {
-    height: 85px;
-}
+    /*timeline ETUS-BRASIL CENTER no monitor grande*/
+    .timeline_item:nth-child(6) .timeline_divider {
+        height: 85px;
+    }
 
-/*timeline BRASIL CENTER-COPERCANA*/
-.timeline_item:nth-child(7) .timeline_divider {
-    height: 60px;
-}
+    /*timeline BRASIL CENTER-COPERCANA no monitor grande*/
+    .timeline_item:nth-child(7) .timeline_divider {
+        height: 60px;
+    }
 
-/*timeline COPERCANA-NEXUS*/
-.timeline_item:nth-child(8) .timeline_divider {
-    height: 46px;
-}
+    /*timeline COPERCANA-NEXUS no monitor grande*/
+    .timeline_item:nth-child(8) .timeline_divider {
+        height: 46px;
+    }
 
 }

@@ -1,4 +1,5 @@
 // portfolio/modal.js
+
 document.addEventListener('DOMContentLoaded', () => {
     // seleciona os elementos que vão abrir o modal
     const gridItems = document.querySelectorAll('.template');
