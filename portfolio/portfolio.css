@@ -121,7 +121,7 @@ div.template figure:hover:after {
 }
 
 .modal-content {
-    width: 90%;
+    width: 50%;
     position: relative;
 }
 
@@ -145,7 +145,7 @@ div.template figure:hover:after {
 .modal-body img {
     display: block;
     width: 100%;
-    max-width: 100%; /* Garante que a imagem não ultrapasse o modal */
+    max-width: 99%; /* Garante que a imagem não ultrapasse o modal */
     height: auto;
     object-fit: contain;
     margin-bottom: 10px;
@@ -160,21 +160,20 @@ div.template figure:hover:after {
 }
 
 .modal-body .paragrafo {
-    font-size: 13px; /* Um pouco menor para descrições */
+    font-size: 30px; /* Um pouco menor para descrições */
     letter-spacing: 1px;
     text-align: left;
 }
 
 /* Botão de fechar */
-.modal-close-btn {
+button.modal-close-btn {
     border: 1px solid #848484;
-    width: 50px;
-    height: 22px;
     cursor: pointer;
     position: absolute;
-    top: 13px;
-    right: -1px;
-    transform: translateY(-50%); /* Ajuste fino vertical */
+    top: -0.5px;
+    right: -0.5px;
+    min-height: 27px;
+    min-width: 55px;
     box-shadow: 1px 1px 0px #fff;
     background: url(../assets/icons/close_button.png) no-repeat 50%, var(--w7-wct-bg), var(--w7-wct_close-bg);
     box-shadow: #fffa inset 0 0 0 1px;
@@ -217,5 +216,5 @@ div.template figure:hover:after {
 
 /* para monitores grandes (1920px ou mais) */
 @media (min-width: 1920px) {
-    
+
 }
